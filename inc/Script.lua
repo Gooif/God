@@ -4241,7 +4241,7 @@ end
 
 end 
 
-if MsgText[1] == "" or MsgText[1]=="" then
+if MsgText[1] =التسليه= "" or MsgText[1]=التسليه="" then
 return [[
 ⤶ اهلين عيني في اوامر التسليه
 ————————————————————
@@ -4380,13 +4380,14 @@ SUDO_USERR = ""
 end
 
 
-text = [[- مـرحبا انا اسـمـي []]..redis:get(boss..':NameBot:')..[[] 🧚🏻‍♀️
-- آختصاصي اداره‏‏ المجموعات 
-- مـن السـبام والتوجيه‏‏ والتكرار والخ...
-- عشان تفعلني ارفعني اشراف وارسل تفعيل. البوت
+text = [[ اهلين انا  []]..redis:get(boss..':NameBot:')..[[] 🧚🏻‍♀️
+↞ آختصاصي اداره‏‏ المجموعات 
+↞ مـن السـبام والتوجيه‏‏ والتكرار والخ...
+↞ كت تويت, يوتيوب
+↞ عشان تفعلني ارفعني اشراف وارسل تفعيل. البوت
 ]]..SUDO_USERR..[[
 
-🎖]]
+]]
 GetUserID(msg.sender_user_id_,function(arg,data)
 if data.last_name_ then Name = data.first_name_ .." "..data.last_name_ else Name = data.first_name_ end
 text = redis:get(boss..':Text_Start') or text
@@ -4404,7 +4405,7 @@ text = text:gsub("{تعليق}",RandomText())
 
 xsudouser = SUDO_USER:gsub('@','')
 xsudouser = xsudouser:gsub([[\_]],'_')
-local inline = {{{text="المـطـور  ",url="t.me/"..xsudouser}}}
+local inline = {{{text="للاستفسارات  ",url="t.me/"..xsudouser}}}
 send_key(msg.sender_user_id_,Flter_Markdown(text),nil,inline,msg.id_)
 end,nil)
 return false
