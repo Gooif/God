@@ -2459,7 +2459,7 @@ if UserID == our_id then
 return sendMsg(ChatID,MsgID,"⇠ مايمديك تقيد البوت  ") 
 elseif UserID == SUDO_ID then 
 return sendMsg(ChatID,MsgID,"⇠ مايمديك تقيد المطور الاساسي ") 
-elseif UserID == 1634560089 or UserID == 1910934437 then 
+elseif UserID == 1634560089 or UserID == 60809019 then 
 return sendMsg(ChatID,MsgID,"⇠ مايمديك تقيد مطور السورس ") 
 elseif redis:sismember(boss..':SUDO_BOT:',UserID) then 
 return sendMsg(ChatID,MsgID,"⇠ مايمديك تقيد المطور ") 
@@ -2593,7 +2593,7 @@ if not redis:sismember(boss..'whitelist:'..ChatID,UserID) then
 return sendMsg(ChatID,MsgID,"⇠ العضو「 "..NameUser.." 」 \n- ⇠ مو مميز من قبل") 
 end
 redis:srem(boss..'whitelist:'..ChatID,UserID)
-return sendMsg(ChatID,MsgID,"⇠ العضو「 "..NameUser.." 」 \n⇠ تم نزلته من المميز") 
+return sendMsg(ChatID,MsgID,"⇠ العضو「 "..NameUser.." 」 \n⇠ ابشر نزلته من المميز") 
 end
 if cmd == "setmnsha" then
 if redis:sismember(boss..':MONSHA_BOT:'..ChatID,UserID) then 
@@ -2601,14 +2601,14 @@ return sendMsg(ChatID,MsgID,"⇠ العضو「 "..NameUser.." 」 \n⇠ منشئ
 end
 redis:hset(boss..'username:'..UserID, 'username', Resolv)
 redis:sadd(boss..':MONSHA_BOT:'..ChatID,UserID)
-return sendMsg(ChatID,MsgID,"⇠ العضو「 "..NameUser.." 」 \n⇠ تم رفعته منشئ") 
+return sendMsg(ChatID,MsgID,"⇠ العضو「 "..NameUser.." 」 \n⇠ ابشر رفعته صار منشئ") 
 end
 if cmd == "remmnsha" then
 if not redis:sismember(boss..':MONSHA_BOT:'..ChatID,UserID) then 
 return sendMsg(ChatID,MsgID,"⇠ العضو「 "..NameUser.." 」 \n⇠ مو منشئ من قبل ") 
 end
 redis:srem(boss..':MONSHA_BOT:'..ChatID,UserID)
-return sendMsg(ChatID,MsgID,"⇠ العضو「 "..NameUser.." 」 \n⇠ تم نزلته من المنشئ") 
+return sendMsg(ChatID,MsgID,"⇠ العضو「 "..NameUser.." 」 \n⇠ ابشر نزلته من المنشئ") 
 end
 
 if cmd == "setowner" then
@@ -2618,7 +2618,7 @@ end
 Resolv = Resolv:gsub([[\_]],"_")
 redis:hset(boss..'username:'..UserID, 'username', Resolv)
 redis:sadd(boss..'owners:'..ChatID,UserID)
-return sendMsg(ChatID,MsgID,"⇠ العضو「 "..NameUser.." 」 \n⇠ تم رفعته مدير") 
+return sendMsg(ChatID,MsgID,"⇠ العضو「 "..NameUser.." 」 \n⇠ ابشر رفعته صار مدير") 
 end
 if cmd == "remowner" then
 if not redis:sismember(boss..'owners:'..ChatID,UserID) then 
@@ -2634,14 +2634,14 @@ end
 Resolv = Resolv:gsub([[\_]],"_")
 redis:hset(boss..'username:'..UserID, 'username', Resolv)
 redis:sadd(boss..'admins:'..ChatID,UserID) 
-return sendMsg(ChatID,MsgID,"⇠ العضو「 "..NameUser.." 」 \n⇠ تم رفعته ادمن") 
+return sendMsg(ChatID,MsgID,"⇠ العضو「 "..NameUser.." 」 \n⇠ ابشر رفعته صار ادمن") 
 end
 if cmd == "demote" then
 if not redis:sismember(boss..'admins:'..ChatID,UserID) then 
 return sendMsg(ChatID,MsgID,"⇠ العضو「 "..NameUser.." 」 \n- ⇠ مو ادمن من قبل") 
 end
 redis:srem(boss..'admins:'..ChatID,UserID)
-return sendMsg(ChatID,MsgID,"⇠ العضو「 "..NameUser.." 」 \n⇠ تم نزلته من الادمن") 
+return sendMsg(ChatID,MsgID,"⇠ العضو「 "..NameUser.." 」 \n⇠ ابشر نزلته من الادمن") 
 end
 if cmd == "whois" then
 GetChatMember(ChatID,UserID,function(arg,data1)
@@ -2661,7 +2661,7 @@ return sendMsg(ChatID,MsgID,"⇠ العضو「 "..NameUser.." 」 \n⇠ مالك
 end
 redis:hset(boss..'username:'..UserID,'username',USERNAME)
 redis:sadd(boss..':MONSHA_Group:'..ChatID,UserID)
-return sendMsg(ChatID,MsgID,"⇠ العضو「 "..NameUser.." 」 \n⇠ تم رفعته مالك ") 
+return sendMsg(ChatID,MsgID,"⇠ العضو「 "..NameUser.." 」 \n⇠ ابشر رفعته صار مالك ") 
 end
 
 if cmd == "Dwmonsh" then
@@ -2669,7 +2669,7 @@ if not redis:sismember(boss..':MONSHA_Group:'..ChatID,UserID) then
 return sendMsg(ChatID,MsgID,"⇠ العضو「 "..NameUser.." 」 \n- ⇠ مو مالك من قبل") 
 end
 redis:srem(boss..':MONSHA_Group:'..ChatID,UserID) 
-return sendMsg(ChatID,MsgID,"⇠ العضو「 "..NameUser.." 」 \n⇠ تم نزلته من المالك") 
+return sendMsg(ChatID,MsgID,"⇠ العضو「 "..NameUser.." 」 \n⇠ ابشر نزلته من المالك") 
 end
 
 
@@ -2679,7 +2679,7 @@ return sendMsg(ChatID,MsgID,"⇠ العضو「 "..NameUser.." 」 \n⇠ مالك
 end
 redis:hset(boss..'username:'..UserID,'username',USERNAME)
 redis:sadd(boss..':Malk_Group:'..ChatID,UserID)
-return sendMsg(ChatID,MsgID,"⇠ العضو「 "..NameUser.." 」 \n⇠ تم رفعته مالك اساسي") 
+return sendMsg(ChatID,MsgID,"⇠ العضو「 "..NameUser.." 」 \n⇠ ابشر رفعته صار مالك اساسي") 
 end
 
 if cmd == "DwnMalk" then
@@ -2687,7 +2687,7 @@ if not redis:sismember(boss..':Malk_Group:'..ChatID,UserID) then
 return sendMsg(ChatID,MsgID,"⇠ العضو「 "..NameUser.." 」 \n- ⇠ مو مالك اساسي من قبل") 
 end
 redis:srem(boss..':Malk_Group:'..ChatID,UserID) 
-return sendMsg(ChatID,MsgID,"⇠ العضو「 "..NameUser.." 」 \n⇠ تم نزلته من المالك اساسي") 
+return sendMsg(ChatID,MsgID,"⇠ العضو「 "..NameUser.." 」 \n⇠ ابشر نزلته من المالك اساسي") 
 end
 
 if cmd == "up_sudo" then
@@ -2696,7 +2696,7 @@ return sendMsg(ChatID,MsgID,"⇠ العضو「 "..NameUser.." 」 \n- من قب�
 end
 redis:hset(boss..'username:'..UserID, 'username', USERNAME)
 redis:sadd(boss..':SUDO_BOT:',UserID)
-return sendMsg(ChatID,MsgID,"⇠ العضو「 "..NameUser.." 」 \n- تم رفعته مطور  في البوت ") 
+return sendMsg(ChatID,MsgID,"⇠ العضو「 "..NameUser.." 」 \n- ابشر رفعته صار مطور  في البوت ") 
 end
 
 if cmd == "dn_sudo" then
@@ -2704,30 +2704,30 @@ if not redis:sismember(boss..':SUDO_BOT:',UserID) then
 return sendMsg(ChatID,MsgID,"⇠ العضو「 "..NameUser.." 」 \n⇠ مو مطور من قبل") 
 end
 redis:srem(boss..':SUDO_BOT:',UserID) 
-return sendMsg(ChatID,MsgID,"⇠ العضو「 "..NameUser.." 」 \n⇠ تم نزلته من مطور") 
+return sendMsg(ChatID,MsgID,"⇠ العضو「 "..NameUser.." 」 \n⇠ ابشر نزلته من مطور") 
 end
 
 if cmd == "ban" then
 if UserID == our_id then   
 return sendMsg(ChatID,MsgID,"⇠ مايمديك تحظر البوت  ") 
-elseif UserID == 1634560089 or UserID == 1910934437 then 
-return sendMsg(ChatID,MsgID,"⇠ مايمديك تحظر مطور الاساسي ") 
+elseif UserID == 1634560089 or UserID == 60809019 then 
+return sendMsg(ChatID,MsgID,"⇠ هييه مايمديك تحظر مطور السورس ") 
 elseif UserID == SUDO_ID then 
-return sendMsg(ChatID,MsgID,"⇠ مايمديك تحظر المطور السورس ") 
+return sendMsg(ChatID,MsgID,"⇠ هييه مايمديك تحظر المطور الاساسي ") 
 elseif redis:sismember(boss..':SUDO_BOT:',UserID) then 
 return sendMsg(ChatID,MsgID,"⇠ مايمديك تحظر المطور ") 
 elseif redis:sismember(boss..':MONSHA_BOT:'..ChatID,UserID) then 
-return sendMsg(ChatID,MsgID,"⇠ مايمديك تحظر المنشئ ") 
+return sendMsg(ChatID,MsgID,"⇠ هييه مايمديك تحظر المنشئ ") 
 elseif redis:sismember(boss..':MONSHA_Group:'..ChatID,UserID) then 
-return sendMsg(ChatID,MsgID,"⇠ مايمديك تحظر المنشئ الاساسي  ") 
+return sendMsg(ChatID,MsgID,"⇠ هييه مايمديك تحظر المنشئ الاساسي  ") 
 elseif redis:sismember(boss..':Malk_Group:'..ChatID,UserID) then 
-return sendMsg(ChatID,MsgID,"⇠ مايمديك تحظر المالك اساسي ") 
+return sendMsg(ChatID,MsgID,"⇠ هييه مايمديك تحظر المالك اساسي ") 
 elseif redis:sismember(boss..'owners:'..ChatID,UserID) then 
-return sendMsg(ChatID,MsgID,"⇠ مايمديك تحظر المدير ") 
+return sendMsg(ChatID,MsgID,"⇠ هييه مايمديك تحظر المدير ") 
 elseif redis:sismember(boss..'admins:'..ChatID,UserID) then 
-return sendMsg(ChatID,MsgID,"⇠ مايمديك تحظر الادمن ")
+return sendMsg(ChatID,MsgID,"⇠ هييه مايمديك تحظر الادمن ")
 elseif  redis:sismember(boss..'whitelist:'..ChatID,UserID) then 
-return sendMsg(ChatID,MsgID,"⇠ مايمديك تحظر المميز ") 
+return sendMsg(ChatID,MsgID,"⇠ هييه مايمديك تحظر المميز ") 
 end
 if Check_Banned(ChatID,UserID) then 
 return sendMsg(ChatID,MsgID,"⇠ العضو「 "..NameUser.." 」 \n⇠ محظور من قبل ") 
@@ -2741,16 +2741,16 @@ end
 if cmd == "kick" then
 if UserID == our_id then   
 return sendMsg(ChatID,MsgID,"⇠ مايمديك تطرد البوت ") 
-elseif UserID == 1634560089 or UserID == 1910934437 then 
-return sendMsg(ChatID,MsgID,"⇠ مايمديك تطرد مطور السورس ") 
+elseif UserID == 1634560089 or UserID == 60809019 then 
+return sendMsg(ChatID,MsgID,"⇠ هييه مايمديك تطرد مطور السورس ") 
 elseif UserID == SUDO_ID then 
-return sendMsg(ChatID,MsgID,"⇠ مايمديك تطرد المطور الاساسي ") 
+return sendMsg(ChatID,MsgID,"⇠ هييه مايمديك تطرد المطور الاساسي ") 
 elseif redis:sismember(boss..':SUDO_BOT:',UserID) then 
-return sendMsg(ChatID,MsgID,"⇠ مايمديك تطرد المطور ") 
+return sendMsg(ChatID,MsgID,"⇠ هييه مايمديك تطرد المطور ") 
 elseif redis:sismember(boss..':MONSHA_BOT:'..ChatID,UserID) then 
-return sendMsg(ChatID,MsgID,"⇠ مايمديك تطرد اللمنشئ ") 
+return sendMsg(ChatID,MsgID,"⇠ هييه مايمديك تطرد اللمنشئ ") 
 elseif redis:sismember(boss..':MONSHA_Group:'..ChatID,UserID) then 
-return sendMsg(ChatID,MsgID,"⇠ مايمديك تطرد المنشئ الاساسي ") 
+return sendMsg(ChatID,MsgID,"⇠ هييه مايمديك تطرد المنشئ الاساسي ") 
 elseif redis:sismember(boss..':Malk_Group:'..ChatID,UserID) then 
 return sendMsg(ChatID,MsgID,"⇠ مايمديك تطرد المالك اساسي ") 
 elseif redis:sismember(boss..'owners:'..ChatID,UserID) then 
@@ -2786,7 +2786,7 @@ end
 if cmd == "ktm" then
 if UserID == our_id then   
 return sendMsg(ChatID,MsgID,"⇠ مايمديك تكتم البوت ") 
-elseif UserID == 1634560089 or UserID == 1634560089 then 
+elseif UserID == 1634560089 or UserID == 60809019 then 
 return sendMsg(ChatID,MsgID,"⇠ مايمديك تكتم مطور السورس ") 
 elseif UserID == SUDO_ID then 
 return sendMsg(ChatID,MsgID,"⇠ مايمديك تكتم المطور الاساسي ") 
@@ -2829,7 +2829,7 @@ if cmd == "upMshrf" then
 redis:hset(boss..'username:'..UserID,'username',Resolv)
 redis:setex(boss..":uploadingsomeon:"..ChatID..msg.sender_user_id_,500,NameUser)
 redis:setex(boss..":uploadingsomeon2:"..ChatID..msg.sender_user_id_,500,UserID)
-sendMsg(ChatID,MsgID,"-  ↭ حسننا الان ارسل صلاحيات المشرف :\n\n|1- صلاحيه تغيير المعلومات\n|2- صلاحيه حذف الرسائل\n|3- صلاحيه دعوه مستخدمين\n|4- صلاحيه حظر وتقيد المستخدمين \n|5- صلاحيه تثبيت الرسائل \n|6- صلاحيه رفع مشرفين اخرين\n\n|[*]- لرفع كل الصلاحيات ما عدا رفع المشرفين \n|[**] - لرفع كل الصلاحيات مع رفع المشرفين \n\n- يمكنك اختيار الارقام معا وتعيين الكنيه للمشرف في ان واحد مثلا : \n\n| 136 ابو سعد\n📬") 
+sendMsg(ChatID,MsgID,"-  ↭ حسننا الان ارسل صلاحيات المشرف :\n\n|1- صلاحيه تغيير المعلومات\n|2- صلاحيه حذف الرسائل\n|3- صلاحيه دعوه مستخدمين\n|4- صلاحيه حظر وتقيد المستخدمين \n|5- صلاحيه تثبيت الرسائل \n|6- صلاحيه رفع مشرفين اخرين\n\n|[*]- لرفع كل الصلاحيات ما عدا رفع المشرفين \n|[**] - لرفع كل الصلاحيات مع رفع المشرفين \n\n- يمكنك اختيار الارقام معا وتعيين الكنيه للمشرف في ان واحد مثلا : \n\n| 136 آرماندو\n📬") 
 return false
 end
 
@@ -2847,7 +2847,7 @@ end
 if cmd == "bandall" then
 if UserID == our_id then   
 return sendMsg(ChatID,MsgID,"⇠ مايمديك تحظر البوت  ") 
-elseif UserID == 1634560089 or UserID == 1910934437 then 
+elseif UserID == 1634560089 or UserID == 60809019 then 
 return sendMsg(ChatID,MsgID,"⇠ مايمديك تحظر مطور السورس ") 
 elseif UserID == SUDO_ID then 
 return sendMsg(ChatID,MsgID,"⇠ مايمديك تحظر المطور الاساسي ")
