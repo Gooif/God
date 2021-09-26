@@ -70,7 +70,6 @@ return SendMsgInline(msg)
 elseif TextCmdquery == "CmdBack" then
 if not CheckUserAdmin(msg) then return answerCallbackQuery(data.id_,"لا تبعص",true) end
 msg.textmsg = [[ للاستفسار - []]..SUDO_USER..[[]
-
 ‏‌‌‏‌‌‌‌‏                                    
 *⇜ هلا فيك في اوامر البوت*
 ]]
@@ -2341,7 +2340,7 @@ if data.channel_ and data.channel_.status_.ID  == "ChatMemberStatusMember" then
 return sendMsg(arg.chat_id_,arg.id_,'- معليش البوت ليس ادمن  في المجموعه \n- يرجى رفعه ادمن لتتمكن من تفعيل البوت  ')
 end
 if arg.lock_servicez then 
-sendMsg(arg.chat_id_,arg.id_,' ⇠ من 「 '..NameUser..' 」\n⇠ ابشر تم التفعيل ورفع الادمنيه \n⇠ ارسل /Commands')
+sendMsg(arg.chat_id_,arg.id_,' ⇠ من 「 '..NameUser..' 」\n⇠ فعلت المجموعة ورفعت كل الادمن \n⇠ اضغط هنا /Commands')
 else
 sendMsg(arg.chat_id_,arg.id_,'⇠ من「 '..NameUser..' 」\n⇠ ابشر تم التفعيل\n⇠ ارسل /Commands')
 end
@@ -2586,7 +2585,7 @@ return sendMsg(ChatID,MsgID,"⇠ العضو「 "..NameUser.." 」 \n⇠ مميز
 end
 redis:hset(boss..'username:'..UserID, 'username', Resolv)
 redis:sadd(boss..'whitelist:'..ChatID,UserID)
-return sendMsg(ChatID,MsgID,"⇠ العضو「 "..NameUser.." 」 \n⇠ تم رفعته مميز") 
+return sendMsg(ChatID,MsgID,"⇠ العضو「 "..NameUser.." 」 \n⇠ ابشر رفعته صار مميز") 
 end
 if cmd == "remwhitelist" then
 if not redis:sismember(boss..'whitelist:'..ChatID,UserID) then 
