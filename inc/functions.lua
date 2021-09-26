@@ -164,7 +164,7 @@ end
 function UpdateM1Query(msg)
 list_settings = '{"inline_keyboard": ['
 ..'[{"text": "م2","callback_data": "List2"},'..'{"text": "م3","callback_data": "List3"}],'
-..'[{"text": "رجوع ","callback_data": "CmdBack"},{"text": "","callback_data": "LoginOut"}]'
+..'[{"text": "Back ","callback_data": "CmdBack"},{"text": "","callback_data": "LoginOut"}]'
 ..']}'
 msg.KeyboardCmd = list_settings
 textMD = [[
@@ -229,7 +229,7 @@ end
 function UpdateM2Query(msg)
 list_settings = '{"inline_keyboard": ['
 ..'[{"text": "م1","callback_data": "List1"},'..'{"text": "م3","callback_data": "List3"}],'
-..'[{"text": "رجوع ","callback_data": "List1"},{"text": "","callback_data": "LoginOut"}]'
+..'[{"text": "Back ","callback_data": "List1"},{"text": "","callback_data": "LoginOut"}]'
 ..']}'
 msg.KeyboardCmd = list_settings
 textMD = [[
@@ -276,7 +276,7 @@ end
 function UpdateM3Query(msg)
 list_settings = '{"inline_keyboard": ['
 ..'[{"text": "الالعاب","callback_data": "CmdSudo"},'..'{"text": "السورس","callback_data": "List4"}],'
-..'[{"text": "رجوع ","callback_data": "CmdBack"}]'
+..'[{"text": "Back ","callback_data": "CmdBack"}]'
 ..']}'
 msg.KeyboardCmd = list_settings
 textMD = [[
@@ -355,11 +355,11 @@ end
 
 function UpdateM4Query(msg)
 list_settings = '{"inline_keyboard": ['
-..'[{"text": "رجوع ","callback_data": "CmdBack"},{"text": "","callback_data": "LoginOut"}]'
+..'[{"text": "Back ","callback_data": "CmdBack"},{"text": "","callback_data": "LoginOut"}]'
 ..']}'
 msg.KeyboardCmd = list_settings
 textMD = [[
--@LIINN8
+-@rnnni
 ]]
 GetUserID(msg.sender_user_id_,function(arg,data)
 msg = arg.msg
@@ -379,14 +379,14 @@ end
 function UpdateM5Query(msg)
 list_settings = '{"inline_keyboard": ['
 ..'[{"text": "م1","callback_data": "List1"},'..'{"text": "م2","callback_data": "List2"}],'
-..'[{"text": "رجوع ","callback_data": "CmdBack"}]'
+..'[{"text": "Back ","callback_data": "CmdBack"}]'
 ..']}'
 msg.KeyboardCmd = list_settings
 textMD = [[ 
   *العاب  لسورس آرماندو. *  🎖  
 ⇠  لتفعيل الالعاب او تعطيلها ارسل
 ⇠  تفعـيل ⇠ تعطيل ⇠ الالعاب
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+————————————
 • امثله ⇠ لعبه امثله قديمه
 • معاني ⇠ لعبه معاني لسمايلات 
 •اسئله ⇠ لعبه اسئله عامه
@@ -403,7 +403,7 @@ textMD = [[
 • رياضيات ⇠ لعبة الرياضيات
 • محيبس ⇠ لعبه محيبس الشهيره
 • المختلف ⇠ لعبه اختلاف لسمايل
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+———————————
   ⇠ مجوهراتي ⇠ عشان تشوف عدد مجوهراتك 
 ⇠ بيع مجوهراتي + العدد للأستبدال ⇺
 ]] 
