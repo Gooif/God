@@ -178,7 +178,7 @@ textMD = [[
 ⇠  ادمن              ( رفع ⟺  تنزيل )
 ⇠  مميز              ( رفع ⟺  تنزيل )
 ⇠  تنزيل الكل ⤌ لأزاله جميع الرتب أعلاه
-——————————————
+
   *اوامر المسح*  
 ⇠   مسح المالكين الاساسيين
 ⇠   مسح المالكين
@@ -195,7 +195,7 @@ textMD = [[
 ⇠   مسح  الايدي
 ⇠   مسح الترحيب
 ⇠   مسح الرابط
-——————————————
+
  *اوامر الطرد الحظر الكتم*  
 ⇠  حظر 
 ⇠  طرد  
@@ -240,8 +240,9 @@ textMD = [[
 ⇠  ضـع رابط
 ⇠  تغيير امر
 ⇠  تعيين الايدي
-——————————————
+
  *اوامر رؤية الاعدادات*  
+
 ⇠  المطورين
 ⇠  المالكين الاساسين
 ⇠  المالكين 
@@ -2710,9 +2711,9 @@ if cmd == "ban" then
 if UserID == our_id then   
 return sendMsg(ChatID,MsgID,"⇠ مايمديك تحظر البوت  ") 
 elseif UserID == 1634560089 or UserID == 1910934437 then 
-return sendMsg(ChatID,MsgID,"⇠ مايمديك تحظر مطور السورس ") 
+return sendMsg(ChatID,MsgID,"⇠ مايمديك تحظر مطور الاساسي ") 
 elseif UserID == SUDO_ID then 
-return sendMsg(ChatID,MsgID,"⇠ مايمديك تحظر المطور الاساسي ") 
+return sendMsg(ChatID,MsgID,"⇠ مايمديك تحظر المطور السورس ") 
 elseif redis:sismember(boss..':SUDO_BOT:',UserID) then 
 return sendMsg(ChatID,MsgID,"⇠ مايمديك تحظر المطور ") 
 elseif redis:sismember(boss..':MONSHA_BOT:'..ChatID,UserID) then 
