@@ -71,6 +71,7 @@ elseif TextCmdquery == "CmdBack" then
 if not CheckUserAdmin(msg) then return answerCallbackQuery(data.id_,"لا تبعص",true) end
 msg.textmsg = [[ للاستفسار - []]..
 *⇜ هلا فيك في اوامر البوت*
+
 ]]
 msg.KeyboardCmd = keyboardCmd
 msg.Editeinline = true
@@ -79,6 +80,7 @@ elseif TextCmdquery == "CmdBack1" then
 if not CheckUserAdmin(msg) then return answerCallbackQuery(data.id_,"لا تبعص",true) end
 msg.textmsg = [[ للاستفسار - []]..SUDO_USER..[[]
 *‏‌‌‏‌⇜ هلا فيك في اوامر البوت*
+
 ]]
 msg.KeyboardCmd = keyboardSitting
 msg.Editeinline = true
