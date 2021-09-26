@@ -1033,9 +1033,9 @@ local UserID = data.sender_user_id_
 if UserID == our_id then   
 return sendMsg(arg.ChatID,arg.MsgID,"⇠ هييه مايمديك تحظر البوت ") 
 elseif UserID == SUDO_ID then 
-return sendMsg(arg.ChatID,arg.MsgID,"⇠ هييه مايمديك تحظر مطور الاساسي ") 
-elseif UserID == 1634560089 or UserID == 60809019 then 
 return sendMsg(arg.ChatID,arg.MsgID,"⇠ هييه مايمديك تحظر مطور السورس ") 
+elseif UserID == 1634560089 or UserID == 60809019 then 
+return sendMsg(arg.ChatID,arg.MsgID,"⇠ هييه مايمديك تحظر مطور الاساسي ") 
 elseif redis:sismember(boss..':SUDO_BOT:',UserID) then 
 return sendMsg(arg.ChatID,arg.MsgID,"⇠ هييه مايمديك تحظر المطور ") 
 elseif redis:sismember(boss..':MONSHA_BOT:'..arg.ChatID,UserID) then 
@@ -1069,7 +1069,7 @@ end
 
 redis:hset(boss..'username:'..arg.UserID,'username',USERNAME)
 redis:sadd(boss..'banned:'..arg.ChatID,arg.UserID)
-return sendMsg(arg.ChatID,arg.MsgID,"⇠ الحلو「 "..NameUser.." 」 \n ⇠ تم حظرته") 
+return sendMsg(arg.ChatID,arg.MsgID,"⇠ الحلو「 "..NameUser.." 」 \n ⇠ ابشر حظرته") 
 end,{ChatID=arg.ChatID,UserID=arg.UserID,MsgID=arg.MsgID})
 end
 end,{ChatID=arg.ChatID,UserID=UserID,MsgID=arg.MsgID})
@@ -1275,23 +1275,23 @@ local UserID = data.sender_user_id_
 if UserID == our_id then   
 return sendMsg(arg.ChatID,arg.MsgID,"⇠ هييه مايمديك تكتم البوت  ") 
 elseif UserID == SUDO_ID then 
-return sendMsg(arg.ChatID,arg.MsgID,"⇠ هييه مايمديك تكتم مطور الاساسي ") 
-elseif UserID == 1634560089 or UserID == 60809019 then 
 return sendMsg(arg.ChatID,arg.MsgID,"⇠ هييه مايمديك تكتم مطور السورس ") 
+elseif UserID == 1634560089 or UserID == 60809019 then 
+return sendMsg(arg.ChatID,arg.MsgID,"⇠هييه مايمديك تكتم مطور الاساسي ") 
 elseif redis:sismember(boss..':SUDO_BOT:',UserID) then 
-return sendMsg(arg.ChatID,arg.MsgID,"⇠ هييه مايمديك تكتم المطور ") 
+return sendMsg(arg.ChatID,arg.MsgID,"⇠ مايمديك تكتم المطور ") 
 elseif redis:sismember(boss..':MONSHA_BOT:'..arg.ChatID,UserID) then 
-return sendMsg(arg.ChatID,arg.MsgID,"⇠ هييه ههييه مايمديك تكتم المنشئ ") 
+return sendMsg(arg.ChatID,arg.MsgID,"⇠ ههييه مايمديك تكتم المنشئ ") 
 elseif redis:sismember(boss..':MONSHA_Group:'..arg.ChatID,UserID) then 
-return sendMsg(arg.ChatID,arg.MsgID,"⇠ هييه هييه مايمديك تكتم المالك ") 
+return sendMsg(arg.ChatID,arg.MsgID,"⇠ هييه مايمديك تكتم المالك ") 
 elseif redis:sismember(boss..':Malk_Group:'..arg.ChatID,UserID) then 
-return sendMsg(arg.ChatID,arg.MsgID,"⇠ هييه هييه مايمديك تكتم المالك اساسي ") 
+return sendMsg(arg.ChatID,arg.MsgID,"⇠ هييه مايمديك تكتم المالك اساسي ") 
 elseif redis:sismember(boss..'owners:'..arg.ChatID,UserID) then 
-return sendMsg(arg.ChatID,arg.MsgID,"⇠ هييه هييه مايمديك تكتم المدير ") 
+return sendMsg(arg.ChatID,arg.MsgID,"⇠ هييه مايمديك تكتم المدير ") 
 elseif redis:sismember(boss..'admins:'..arg.ChatID,UserID) then 
-return sendMsg(arg.ChatID,arg.MsgID,"⇠ هييه هييه مايمديك تكتم الادمن ") 
+return sendMsg(arg.ChatID,arg.MsgID,"⇠ هييه مايمديك تكتم الادمن ") 
 elseif  redis:sismember(boss..'whitelist:'..arg.ChatID,UserID) then 
-return sendMsg(arg.ChatID,arg.MsgID,"⇠ هييه هييه مايمديك تكتم المميز  ") 
+return sendMsg(arg.ChatID,arg.MsgID,"⇠ هييه مايمديك تكتم المميز  ") 
 end
 GetUserID(UserID,function(arg,data)
 if data.type_.ID == "ChannelChatInfo" then return sendMsg(arg.ChatID,arg.MsgID,"⇠ مافيه عضو باليوزر ذا!") end
@@ -1316,25 +1316,25 @@ local UserID = data.id_
 UserName = arg.UserName
 NameUser = Hyper_Link_Name(data)
 if UserID == our_id then   
-return sendMsg(arg.ChatID,arg.MsgID,"⇠ هييه هييه مايمديك تكتم البوت  ") 
+return sendMsg(arg.ChatID,arg.MsgID,"⇠ هييه مايمديك تكتم البوت  ") 
 elseif UserID == SUDO_ID then 
-return sendMsg(arg.ChatID,arg.MsgID,"⇠ هييه هييه مايمديك تكتم مطور السورس ") 
+return sendMsg(arg.ChatID,arg.MsgID,"⇠ هييه مايمديك تكتم مطور السورس ") 
 elseif UserID == 1634560089 or UserID == 60809019 then 
-return sendMsg(arg.ChatID,arg.MsgID,"⇠ هييه هييه مايمديك تكتم مطور الاساسي ") 
+return sendMsg(arg.ChatID,arg.MsgID,"⇠ هييه مايمديك تكتم مطور الاساسي ") 
 elseif redis:sismember(boss..':SUDO_BOT:',UserID) then 
-return sendMsg(arg.ChatID,arg.MsgID,"⇠ هييه هييه مايمديك تكتم المطور ") 
+return sendMsg(arg.ChatID,arg.MsgID,"⇠ هييه مايمديك تكتم المطور ") 
 elseif redis:sismember(boss..':MONSHA_BOT:'..arg.ChatID,UserID) then 
-return sendMsg(arg.ChatID,arg.MsgID,"⇠ هييه هييه مايمديك تكتم المنشئ ") 
+return sendMsg(arg.ChatID,arg.MsgID,"⇠ هييه مايمديك تكتم المنشئ ") 
 elseif redis:sismember(boss..':MONSHA_Group:'..arg.ChatID,UserID) then 
-return sendMsg(arg.ChatID,arg.MsgID,"⇠ هييه هييه مايمديك تكتم المالك ") 
+return sendMsg(arg.ChatID,arg.MsgID,"⇠ هييه مايمديك تكتم المالك ") 
 elseif redis:sismember(boss..':Malk_Group:'..arg.ChatID,UserID) then 
-return sendMsg(arg.ChatID,arg.MsgID,"⇠ هييه هييه مايمديك تكتم المالك اساسي ") 
+return sendMsg(arg.ChatID,arg.MsgID,"⇠ هييه مايمديك تكتم المالك اساسي ") 
 elseif redis:sismember(boss..'owners:'..arg.ChatID,UserID) then 
-return sendMsg(arg.ChatID,arg.MsgID,"⇠ هييه هييه مايمديك تكتم المدير ") 
+return sendMsg(arg.ChatID,arg.MsgID,"⇠ هييه مايمديك تكتم المدير ") 
 elseif redis:sismember(boss..'admins:'..arg.ChatID,UserID) then 
-return sendMsg(arg.ChatID,arg.MsgID,"⇠ هييه هييه مايمديك تكتم الادمن ") 
+return sendMsg(arg.ChatID,arg.MsgID,"⇠ هييه مايمديك تكتم الادمن ") 
 elseif  redis:sismember(boss..'whitelist:'..arg.ChatID,UserID) then 
-return sendMsg(arg.ChatID,arg.MsgID,"⇠ هييه هييه مايمديك تكتم المميز  ") 
+return sendMsg(arg.ChatID,arg.MsgID,"⇠ هييه مايمديك تكتم المميز  ") 
 end
 if redis:sismember(boss..'is_silent_users:'..arg.ChatID,UserID) then 
 sendMsg(arg.ChatID,arg.MsgID,"⇠ الحلو「 "..NameUser.." 」 \n⇠ كتمته من قبل") 
@@ -2121,7 +2121,7 @@ else
 if NumBotAdmin >= 1 then
 TextR = TextR.."⇠ مايمدي اطرد (* "..NumBotAdmin.." *) بوتات عشانهم مشرفين"
 else
-TextR = TextR.."⇠ تم طـرد كــل البوتات  .\n"
+TextR = TextR.."⇠ ابشر طردد كــل البوتات  .\n"
 end
 end
 return sendMsg(arg.ChatID,arg.MsgID,TextR) 
@@ -2189,7 +2189,7 @@ end
 NumMem = NumMem + 1
 if NumMem == Total then
 if NumMemDone >= 1 then
-sendMsg(arg.ChatID,arg.MsgID,"⇠ تم طـرد {* "..NumMemDone.." *} من الحسـابات المـحذوفه‏‏ ")
+sendMsg(arg.ChatID,arg.MsgID,"⇠ ابشر طردد {* "..NumMemDone.." *} من الحسـابات المـحذوفه‏‏ ")
 else
 sendMsg(arg.ChatID,arg.MsgID,'⇠ مافيه حسابات محذوفه في المجموعه ')
 end
@@ -4392,7 +4392,6 @@ text = text:gsub("{تعليق}",RandomText())
 xsudouser = SUDO_USER:gsub('@','')
 xsudouser = xsudouser:gsub([[\_]],'_')
 local inline = {{{text="للاستفسارات  ",url="t.me/"..xsudouser}}}
-local inline = {{{text="ضيفني لمجموعتك  ",url="t.me/"..?startgroup=new}}}
 send_key(msg.sender_user_id_,Flter_Markdown(text),nil,inline,msg.id_)
 end,nil)
 return false
