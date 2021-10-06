@@ -20,7 +20,7 @@ local NameUser   = Hyper_Link_Name(data)
 if redis:get(boss.."lock_RandomRdod"..msg.chat_id_) then 
 return sendMsg(msg.chat_id_,msg.id_,"⇠ الردود العشوائيه مفعله من قبل    \n⇠  من「 "..NameUser.." 」 " ) 
 else redis:set(boss.."lock_RandomRdod"..msg.chat_id_,true)
-return sendMsg(msg.chat_id_,msg.id_,"⇠ تم تفعيل الردود العشوائيه    \n⇠  من「 "..NameUser.." 」 " ) 
+return sendMsg(msg.chat_id_,msg.id_,"⇠ ابشر فعلت الردود العشوائيه    \n⇠  من「 "..NameUser.." 」 " ) 
 end 
 end,{msg=msg})
 end
@@ -47,7 +47,7 @@ local NameUser   = Hyper_Link_Name(data)
 if redis:get(boss.."lock_KickBan"..msg.chat_id_) then 
 return sendMsg(msg.chat_id_,msg.id_,"⇠ الحظر والطرد مفعل من قبل    \n⇠  من「 "..NameUser.." 」 " ) 
 else redis:set(boss.."lock_KickBan"..msg.chat_id_,true)
-return sendMsg(msg.chat_id_,msg.id_,"⇠ تم تفعيل الحظر والطرد    \n⇠  من「 "..NameUser.." 」 " ) 
+return sendMsg(msg.chat_id_,msg.id_,"⇠ ابشر فعلت الحظر والطرد    \n⇠  من「 "..NameUser.." 」 " ) 
 end 
 end,{msg=msg})
 end
@@ -74,7 +74,7 @@ local NameUser   = Hyper_Link_Name(data)
 if redis:get(boss.."lock_rdodSource"..msg.chat_id_) then 
 return sendMsg(msg.chat_id_,msg.id_,"⇠ ردود السورس مفعل من قبل    \n⇠  من「 "..NameUser.." 」 " ) 
 else redis:set(boss.."lock_rdodSource"..msg.chat_id_,true)
-return sendMsg(msg.chat_id_,msg.id_,"⇠ تم تفعيل ردود السورس    \n⇠  من「 "..NameUser.." 」 " ) 
+return sendMsg(msg.chat_id_,msg.id_,"⇠ ابشر فعلت ردود السورس    \n⇠  من「 "..NameUser.." 」 " ) 
 end 
 end,{msg=msg})
 end
@@ -114,7 +114,7 @@ local NameUser   = Hyper_Link_Name(data)
 if redis:get(boss.."lock_check"..msg.chat_id_) then
 return sendMsg(msg.chat_id_,msg.id_,"⇠ التحقق مفعل من قبل    \n⇠  من「 "..NameUser.." 」 " )        else
 redis:set(boss.."lock_check"..msg.chat_id_,true)
-return sendMsg(msg.chat_id_,msg.id_,"⇠ تم تفعيل التحقق    \n⇠  من「 "..NameUser.." 」 " )
+return sendMsg(msg.chat_id_,msg.id_,"⇠ ابشر فعلت التحقق    \n⇠  من「 "..NameUser.." 」 " )
 end
 end,{msg=msg})
 end
@@ -149,7 +149,7 @@ local NameUser   = Hyper_Link_Name(data)
 if redis:get(boss.."lock_cleaner"..msg.chat_id_) then
 return sendMsg(msg.chat_id_,msg.id_,"⇠ التنظيف التلقائي مفعل من قبل    \n⇠  من「 "..NameUser.." 」 " )        else
 redis:set(boss.."lock_cleaner"..msg.chat_id_,true)
-return sendMsg(msg.chat_id_,msg.id_,"⇠ تم تفعيل التنظيف التلقائي    \n⇠  من「 "..NameUser.." 」 " )
+return sendMsg(msg.chat_id_,msg.id_,"⇠ ابشر فعلت التنظيف التلقائي    \n⇠  من「 "..NameUser.." 」 " )
 end
 end,{msg=msg})
 end
@@ -164,7 +164,7 @@ local NameUser   = Hyper_Link_Name(data)
 if redis:get(boss.."lock_takkl"..msg.chat_id_) then 
 return sendMsg(msg.chat_id_,msg.id_,"⇠ المنشن مفعل من قبل    \n⇠  من「 "..NameUser.." 」 " ) 
 else redis:set(boss.."lock_takkl"..msg.chat_id_,true)
-return sendMsg(msg.chat_id_,msg.id_,"تم تفعيل المنشن   \n⇠  من「 "..NameUser.." 」 " ) 
+return sendMsg(msg.chat_id_,msg.id_,"ابشر فعلت المنشن   \n⇠  من「 "..NameUser.." 」 " ) 
 end
 end,{msg=msg})
 end
@@ -192,7 +192,7 @@ local NameUser   = Hyper_Link_Name(data)
 if redis:get(boss.."lock_leftgroup"..msg.chat_id_) then 
 return sendMsg(msg.chat_id_,msg.id_,"⇠ المغادر مفعل من قبل    \n⇠  من「 "..NameUser.." 」 " ) 
 else redis:set(boss.."lock_leftgroup"..msg.chat_id_,true)
-return sendMsg(msg.chat_id_,msg.id_,"⇠ تم تفعيل المغادره    \n⇠  من「 "..NameUser.." 」 " ) 
+return sendMsg(msg.chat_id_,msg.id_,"⇠ ابشر فعلت المغادره    \n⇠  من「 "..NameUser.." 」 " ) 
 end
 end,{msg=msg})
 end
@@ -221,7 +221,7 @@ local NameUser   = Hyper_Link_Name(data)
 if redis:get(boss.."antiedit"..msg.chat_id_) then 
 return sendMsg(msg.chat_id_,msg.id_,"⇠ الحمايه مفعله من قبل    \n⇠  من「 "..NameUser.." 」 " ) 
 else redis:set(boss.."antiedit"..msg.chat_id_,true)
-return sendMsg(msg.chat_id_,msg.id_,"⇠ تم تفعيل الحمايه    \n⇠  من「 "..NameUser.." 」 " ) 
+return sendMsg(msg.chat_id_,msg.id_,"⇠ ابشر فعلت الحمايه    \n⇠  من「 "..NameUser.." 」 " ) 
 end
 end,{msg=msg})
 end
@@ -249,7 +249,7 @@ local NameUser   = Hyper_Link_Name(data)
 if redis:get(boss.."idphoto"..msg.chat_id_) then 
 return sendMsg(msg.chat_id_,msg.id_,"⇠ الايدي بالصوره مفعله من قبل    \n⇠  من「 "..NameUser.." 」 " ) 
 else redis:set(boss.."idphoto"..msg.chat_id_,true)
-return sendMsg(msg.chat_id_,msg.id_,"⇠ تم تفعيل الايدي بالصوره    \n⇠  من「 "..NameUser.." 」 " ) 
+return sendMsg(msg.chat_id_,msg.id_,"⇠ ابشر فعلت الايدي بالصوره    \n⇠  من「 "..NameUser.." 」 " ) 
 end
 end,{msg=msg})
 end
@@ -276,7 +276,7 @@ local NameUser   = Hyper_Link_Name(data)
 if redis:get(boss.."lock_linkk"..msg.chat_id_) then 
 return sendMsg(msg.chat_id_,msg.id_,"⇠ الرابط مفعل من قبل    \n⇠  من「 "..NameUser.." 」 " ) 
 else redis:set(boss.."lock_linkk"..msg.chat_id_,true)
-return sendMsg(msg.chat_id_,msg.id_,"⇠ تم تفعيل الرابط    \n⇠  من「 "..NameUser.." 」 " ) 
+return sendMsg(msg.chat_id_,msg.id_,"⇠ ابشر فعلت الرابط    \n⇠  من「 "..NameUser.." 」 " ) 
 end
 end,{msg=msg})
 end
@@ -303,7 +303,7 @@ local NameUser   = Hyper_Link_Name(data)
 if redis:get(boss.."lock_woring"..msg.chat_id_) then 
 return sendMsg(msg.chat_id_,msg.id_,"⇠ التحذير مفعل من قبل    \n⇠  من「 "..NameUser.." 」 " ) 
 else redis:set(boss.."lock_woring"..msg.chat_id_,true)
-return sendMsg(msg.chat_id_,msg.id_,"⇠ تم تفعيل التحذير    \n⇠  من「 "..NameUser.." 」 " ) 
+return sendMsg(msg.chat_id_,msg.id_,"⇠ ابشر فعلت التحذير    \n⇠  من「 "..NameUser.." 」 " ) 
 end
 end,{msg=msg})
 end
@@ -345,7 +345,7 @@ if redis:get(boss.."lock_id"..msg.chat_id_) then
 return sendMsg(msg.chat_id_,msg.id_,"⇠ الايدي مفعل من قبل    \n⇠  من「 "..NameUser.." 」 " ) 
 else 
 redis:set(boss.."lock_id"..msg.chat_id_,true)  
-return sendMsg(msg.chat_id_,msg.id_,"⇠ تم تفعيل الايدي    \n⇠  من「 "..NameUser.." 」 " ) 
+return sendMsg(msg.chat_id_,msg.id_,"⇠ ابشر فعلت الايدي    \n⇠  من「 "..NameUser.." 」 " ) 
 end 
 end,{msg=msg})
 end
@@ -358,7 +358,7 @@ local NameUser   = Hyper_Link_Name(data)
 if redis:get(boss.."welcome:get"..msg.chat_id_) then 
 return sendMsg(msg.chat_id_,msg.id_,"⇠ الترحيب مفعل من قبل    \n⇠  من「 "..NameUser.." 」 " ) 
 else redis:set(boss.."welcome:get"..msg.chat_id_,true)  
-return sendMsg(msg.chat_id_,msg.id_,"⇠ تم تفعيل الترحيب    \n⇠  من「 "..NameUser.." 」 " ) 
+return sendMsg(msg.chat_id_,msg.id_,"⇠ ابشر فعلت الترحيب    \n⇠  من「 "..NameUser.." 」 " ) 
 end 
 end,{msg=msg})
 end
@@ -646,7 +646,7 @@ if not redis:get(boss.."lock_twasel") then
 return sendMsg(msg.chat_id_,msg.id_,"⇠ التواصل مفعل من قبل    \n⇠  من「 "..NameUser.." 」 " )
 else 
 redis:del(boss.."lock_twasel")
-return sendMsg(msg.chat_id_,msg.id_,"⇠ تم تفعيل التواصل    \n⇠  من「 "..NameUser.." 」 " )
+return sendMsg(msg.chat_id_,msg.id_,"⇠ ابشر فعلت التواصل    \n⇠  من「 "..NameUser.." 」 " )
 end
 end,{msg=msg})
 end
@@ -661,7 +661,7 @@ local NameUser   = Hyper_Link_Name(data)
 if redis:get(boss.."lockidedit") then 
 return sendMsg(msg.chat_id_,msg.id_,"⇠ تعيين الايدي للمطور مفعل من قبل   \n⇠  من「 "..NameUser.." 」 " )
 else redis:set(boss.."lockidedit",true)
-return sendMsg(msg.chat_id_,msg.id_,"⇠ تم تفعيل تعيين الايدي للمطور     \n⇠  من「 "..NameUser.." 」 " )
+return sendMsg(msg.chat_id_,msg.id_,"⇠ ابشر فعلت تعيين الايدي للمطور     \n⇠  من「 "..NameUser.." 」 " )
 end
 end,{msg=msg})
 end
@@ -704,7 +704,7 @@ if redis:get(boss.."lock_brod") then
 return sendMsg(msg.chat_id_,msg.id_,"⇠ اذاعه المطورين مفعل من قبل    \n⇠  من「 "..NameUser.." 」 " )
 else 
 redis:set(boss.."lock_brod",true)
-return sendMsg(msg.chat_id_,msg.id_,"⇠ تم تفعيل اذاعه المطورين    \n⇠  من「 "..NameUser.." 」 " )
+return sendMsg(msg.chat_id_,msg.id_,"⇠ ابشر فعلت اذاعه المطورين    \n⇠  من「 "..NameUser.." 」 " )
 end
 end,{msg=msg})
 end
@@ -733,7 +733,7 @@ if redis:get(boss.."replay"..msg.chat_id_) then
 return sendMsg(msg.chat_id_,msg.id_,"⇠ الردود مفعل من قبل    \n⇠  من「 "..NameUser.." 」 " )
 else 
 redis:set(boss.."replay"..msg.chat_id_,true)
-return sendMsg(msg.chat_id_,msg.id_,"⇠ تم تفعيل الردود    \n⇠  من「 "..NameUser.." 」 " )
+return sendMsg(msg.chat_id_,msg.id_,"⇠ ابشر فعلت الردود    \n⇠  من「 "..NameUser.." 」 " )
 end
 end,{msg=msg})
 end
@@ -762,7 +762,7 @@ if redis:get(boss.."lock_service") then
 return sendMsg(msg.chat_id_,msg.id_,"⇠ نظام البوت خدمي مفعل من قبل    \n⇠  من「 "..NameUser.." 」 " ) 
 else 
 redis:set(boss.."lock_service",true)
-return sendMsg(msg.chat_id_,msg.id_,"⇠ تم تفعيل نظام البوت خدمي    \n⇠  من「 "..NameUser.." 」 " ) 
+return sendMsg(msg.chat_id_,msg.id_,"⇠ ابشر فعلت نظام البوت خدمي    \n⇠  من「 "..NameUser.." 」 " ) 
 end
 end,{msg=msg})
 end
