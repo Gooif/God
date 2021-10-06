@@ -3072,7 +3072,7 @@ NameUser = Hyper_Link_Name(data)
 if redis:sismember(boss..':SUDO_BOT:',arg.UserID) then 
 sendMsg(arg.ChatID,arg.MsgID,"⇠ الحلو「 "..NameUser.." 」 \n⇠ مطور من قبل في البوت") 
 else
-sendMsg(arg.ChatID,arg.MsgID,"⇠ الحلو「 "..NameUser.." 」 \n⇠ ايشر رفعته صار مطور") 
+sendMsg(arg.ChatID,arg.MsgID,"⇠ الحلو「 "..NameUser.." 」 \n⇠ ابشر رفعته صار مطور") 
 redis:hset(boss..'username:'..arg.UserID,'username',RUSERNAME)
 redis:sadd(boss..':SUDO_BOT:',arg.UserID)
 end
