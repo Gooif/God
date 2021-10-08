@@ -128,7 +128,6 @@ keyboardCmd = [[{
 "inline_keyboard": [
 [{"text": "①","callback_data": "List1"},{"text": "②","callback_data": "List2"},{"text": "③","callback_data": "List3"}],
 [{"text": "الالعاب","callback_data": "CmdSudo"},{"text": "Suorce","callback_data": "List4"}],
-[{"text": "اوامر المطور","callback_data": "CmdSudo"},
 [{"text": "","callback_data": "LoginOut"}]
 ]}
 ]]
