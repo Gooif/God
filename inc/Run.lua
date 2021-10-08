@@ -80,7 +80,7 @@ boss..":SUDO_ID:",SUDO_USER,
 boss..":DataCenter:","Amsterdam",
 boss..":UserNameBot:",BOT_User,
 boss..":ApiSource","Sourceee6ee",
-boss..":NameBot:","ارماندو",
+boss..":NameBot:","باريس",
 "TH3BOSS_INSTALL","Yes"
 )
 redis:hset(boss..'username:'..SUDO_USER,'username','@'..GetUser.result.username:gsub('_',[[\_]]))
@@ -92,7 +92,7 @@ Cr_file = io.open("./inc/Token.txt", "w")
 Cr_file:write(Token)
 Cr_file:close()
 print('\27[1;36m￤Token.txt is created.\27[m')
-local Text = "اهلين عزيزي [المطور الاساسي](tg://user?id="..SUDO_USER..") \nشكرا لاستخدامك سورس آرماندو  \nأرســل الحين /start \nعشان تشوف اوامر المطور  المجهزه بالكيبورد\n\n𓍦"
+local Text = "اهلين عزيزي [المطور الاساسي](tg://user?id="..SUDO_USER..") \nشكرا لاستخدامك سورس باريس  \nأرســل الحين /start \nعشان تشوف اوامر المطور  المجهزه بالكيبورد\n\n𓍦"
 https.request(Api_Token..'/sendMessage?chat_id='..SUDO_USER..'&text='..URL.escape(Text)..'&parse_mode=Markdown')
 local CmdRun = [[
 rm -f ./README.md
@@ -112,7 +112,7 @@ if not TokenBot then
 print('\27[0;33m>>'..[[
 
 
-مرحباآ بك في سورس آرماندو
+مرحباآ بك في سورس باريس
 
 
 
@@ -151,7 +151,7 @@ end
 print('\27[0;33m>>'..[[
 
 
-مرحباآ بك في سورس ارماندو
+مرحباآ بك في سورس باريس
 
 
 
@@ -286,8 +286,8 @@ msg.TheRankCmd = redis:get(boss..":RtbaNew1:"..msg.chat_id_) or 'المطور ا
 msg.TheRank = redis:get(boss..":RtbaNew1:"..msg.chat_id_) or 'مطور الاساسي'
 msg.Rank = 1
 elseif redis:sismember(boss..':SUDO_BOT:',msg.sender_user_id_) then 
-msg.TheRankCmd = redis:get(boss..":RtbaNew2:"..msg.chat_id_) or 'المطور'
-msg.TheRank = redis:get(boss..":RtbaNew2:"..msg.chat_id_) or 'المطور'
+msg.TheRankCmd = redis:get(boss..":RtbaNew2:"..msg.chat_id_) or 'A'
+msg.TheRank = redis:get(boss..":RtbaNew2:"..msg.chat_id_) or 'A'
 msg.Rank = 2
 elseif msg.GroupActive and redis:sismember(boss..':Malk_Group:'..msg.chat_id_,msg.sender_user_id_) then 
 msg.TheRankCmd = redis:get(boss..":RtbaNew8:"..msg.chat_id_) or 'مالك اساسي'
@@ -371,7 +371,7 @@ kick_user(msg.sender_user_id_, msg.chat_id_)
 end
 if msg.content_.members_[0].id_ == our_id and redis:get(boss..':WELCOME_BOT') then
 SUDO_USER = redis:hgetall(boss..'username:'..SUDO_ID).username
-sendPhoto(msg.chat_id_,msg.id_,redis:get(boss..':WELCOME_BOT'),[[⤶ اهلين انا ]]..redis:get(boss..':NameBot:')..[[ 
+sendPhoto(msg.chat_id_,msg.id_,redis:get(boss..':WELCOME_BOT'),[[ اهلين انا ]]..redis:get(boss..':NameBot:')..[[ 
 اختصاصي حمايه المجموعات من السبام والتكرار والتوجه والخ..
 
 ⇠ كت تويت واشياء كثير..
