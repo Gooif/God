@@ -3058,7 +3058,7 @@ return '⤌ارسل امر القائمه المراد تعيينهم مثل ا�
 end
 
 
-if MsgText[1] == "رفع A" then
+if MsgText[1] == "رفع مطور" then
 if not MsgText[2] and msg.reply_id then 
 GetMsgInfo(msg.chat_id_,msg.reply_id,function(arg,data)
 if not data.sender_user_id_ then return sendMsg(arg.ChatID,arg.MsgID,"⤌معليش هذا الحلو ليس موجود ضمن المجموعات ") end
@@ -3070,9 +3070,9 @@ GetUserID(UserID,function(arg,data)
 RUSERNAME = ResolveUserName(data)
 NameUser = Hyper_Link_Name(data)
 if redis:sismember(boss..':SUDO_BOT:',arg.UserID) then 
-sendMsg(arg.ChatID,arg.MsgID,"⤌الحلو「 "..NameUser.." 」 \n⤌A من قبل في البوت") 
+sendMsg(arg.ChatID,arg.MsgID,"⤌الحلو「 "..NameUser.." 」 \n⤌مطور من قبل في البوت") 
 else
-sendMsg(arg.ChatID,arg.MsgID,"⤌الحلو「 "..NameUser.." 」 \n⤌ابشر رفعته صار A") 
+sendMsg(arg.ChatID,arg.MsgID,"⤌الحلو「 "..NameUser.." 」 \n⤌ابشر رفعته صار مطور") 
 redis:hset(boss..'username:'..arg.UserID,'username',RUSERNAME)
 redis:sadd(boss..':SUDO_BOT:',arg.UserID)
 end
@@ -3089,11 +3089,11 @@ local UserID = data.id_
 ReUsername = arg.UserName
 NameUser = Hyper_Link_Name(data)
 if redis:sismember(boss..':SUDO_BOT:',UserID) then 
-sendMsg(arg.ChatID,arg.MsgID,"⤌الحلو「 "..NameUser.." 」 \n⤌A من قبل في البوت") 
+sendMsg(arg.ChatID,arg.MsgID,"⤌الحلو「 "..NameUser.." 」 \n⤌مطور من قبل في البوت") 
 else
 redis:hset(boss..'username:'..UserID,'username',ReUsername)
 redis:sadd(boss..':SUDO_BOT:',UserID)
-sendMsg(arg.ChatID,arg.MsgID,"⤌الحلو「 "..NameUser.." 」 \n⤌ابشر رفعته صار A") 
+sendMsg(arg.ChatID,arg.MsgID,"⤌الحلو「 "..NameUser.." 」 \n⤌ابشر رفعته صار مطور") 
 end
 end,{ChatID=msg.chat_id_,MsgID=msg.id_,UserName=MsgText[2]})
 end 
@@ -3105,7 +3105,7 @@ end
 return false
 end
 
-if MsgText[1] == "تنزيل A" then
+if MsgText[1] == "تنزيل مطور" then
 if not MsgText[2] and msg.reply_id then 
 GetMsgInfo(msg.chat_id_,msg.reply_id,function(arg,data)
 if not data.sender_user_id_ then return sendMsg(arg.ChatID,arg.MsgID,"⤌معليش هذا الحلو ليس موجود ضمن المجموعات ") end
@@ -3113,9 +3113,9 @@ local UserID = data.sender_user_id_
 GetUserID(UserID,function(arg,data)
 NameUser = Hyper_Link_Name(data)
 if not redis:sismember(boss..':SUDO_BOT:',arg.UserID) then 
-sendMsg(arg.ChatID,arg.MsgID,"⤌الحلو「 "..NameUser.." 」 \n⤌مو A من قبل \n𓍦") 
+sendMsg(arg.ChatID,arg.MsgID,"⤌الحلو「 "..NameUser.." 」 \n⤌مو مطور من قبل \n𓍦") 
 else
-sendMsg(arg.ChatID,arg.MsgID,"⤌الحلو「 "..NameUser.." 」 \n⤌ابشر نزلته من A") 
+sendMsg(arg.ChatID,arg.MsgID,"⤌الحلو「 "..NameUser.." 」 \n⤌ابشر نزلته من مطور") 
 redis:srem(boss..':SUDO_BOT:',arg.UserID)
 end  
 end,{ChatID=arg.ChatID,UserID=UserID,MsgID=arg.MsgID})
@@ -3129,10 +3129,10 @@ if data.type_.ID == "ChannelChatInfo" then return sendMsg(arg.ChatID,arg.MsgID,"
 local UserID = data.id_
 NameUser = Hyper_Link_Name(data)
 if not redis:sismember(boss..':SUDO_BOT:',UserID) then 
-sendMsg(arg.ChatID,arg.MsgID,"⤌الحلو「 "..NameUser.." 」 \n⤌مو A من قبل \n𓍦") 
+sendMsg(arg.ChatID,arg.MsgID,"⤌الحلو「 "..NameUser.." 」 \n⤌مو مطور من قبل \n𓍦") 
 else
 redis:srem(boss..':SUDO_BOT:',UserID)
-sendMsg(arg.ChatID,arg.MsgID,"⤌الحلو「 "..NameUser.." 」 \n⤌ابشر نزلتهه A") 
+sendMsg(arg.ChatID,arg.MsgID,"⤌الحلو「 "..NameUser.." 」 \n⤌ابشر نزلتهه مطور") 
 end
 end,{ChatID=msg.chat_id_,MsgID=msg.id_,UserName=MsgText[2]})
 end 
@@ -3543,7 +3543,7 @@ end
 
 
 if MsgText[1] == 'اصدار السورس' or MsgText[1] == 'الاصدار' then
-return '⤌اصدار سورس باريس : *v'..version..'* '
+return '⤌اصدار سورس آرماندو : *v'..version..'* '
 end
 
 if MsgText[1] == 'تحديث السورس' then
@@ -3615,8 +3615,8 @@ end
 if (MsgText[1]== "ايديي" or MsgText[1]=="ايدي") and msg.type == "pv" then return  "\n"..msg.sender_user_id_.."\n"  end
 
 if MsgText[1]== "قناة السورس" and msg.type == "pv" then
-local inline = {{{text="قناه‏‏ السـورس : باريس ",url="t.me/rnnni"}}}
-send_key(msg.sender_user_id_,'  [قناة السورس: باريس](t.me/rnnni)',nil,inline,msg.id_)
+local inline = {{{text="قناه‏‏ السـورس : آرماندو ",url="t.me/rnnni"}}}
+send_key(msg.sender_user_id_,'  [قناة السورس: آرماندو](t.me/rnnni)',nil,inline,msg.id_)
 return false
 end
 
@@ -4334,7 +4334,7 @@ end
 if msg.text=="/start" then
 
 if msg.SudoBase then
-local text = '⤌اهلينن عينيي باريس\n⤌انت‌‏ المـطـور الاساسي هنا  \n...\n⤌تقدر تتحكم بكل الاوامر الموجودة بالكيبورد\n⤌بس اضغط على الامر اللي تبيه ‌‏ '
+local text = '⤌اهلينن عينيي آرماندو\n⤌انت‌‏ المـطـور الاساسي هنا  \n...\n⤌تقدر تتحكم بكل الاوامر الموجودة بالكيبورد\n⤌بس اضغط على الامر اللي تبيه ‌‏ '
 
 local keyboard = {
 {"الاحصائيات"},
