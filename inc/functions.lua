@@ -361,6 +361,8 @@ msg.KeyboardCmd = list_settings
 textMD = [[
 𝗪𝗲𝗹𝗰𝗼𝗺𝗲 𝗦𝗼𝘂𝗿𝗰𝗲 𝗣𝗮𝗿𝗶𝘀
 𓃠[𝙊𝙒𝙉𝙀𝙍 ⁦](https://t.me/iiiziiii)
+𓃠[ᵇᵃᵈ 🇯🇴 ⁦](https://t.me/T00T0)
+𓃠[𝐋𝐎𝐍𝐄𝐑 ⁦](https://t.me/eeree6)
 𓃠[𝘾𝙃𝘼𝙉𝙉𝙀𝙇](https://t.me/rnnni)
 ]]
 GetUserID(msg.sender_user_id_,function(arg,data)
