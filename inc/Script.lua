@@ -1496,13 +1496,16 @@ return false
 end 
 
 if MsgText[1] == "الرابط" then
+
 if not redis:get( boss.."lock_linkk"..msg.chat_id_) then return "⤌الامر معطل من قبل الادارة \n^"  end
+
 if not redis:get( boss..'linkGroup'..msg.chat_id_) then return "⤌مافيه رابط\n⤌لانشاء رابط ارسل { انشاء رابط } \n" end
-local GroupName = redis:get( boss..'group:name'..msg.chat_id_)
-local GroupLink = redis:get( boss..'linkGroup'..msg.chat_id_)
-local LinkG = "["..GroupName.."]("..GroupLink..")"
-return 
-sendMsgg(msg.chat_id_,msg.id_,LinkG)
+
+local GroupName = redis:get(boss..'group:name'..msg.chat_id_)
+local GroupLink = redis:get(boss..'linkGroup'..msg.chat_id_)
+local LinkG = " ["..GroupName.."]("..GroupLink..") "
+return
+sendMsg(msg.chat_id_,msg.id_,LinkG)
 end
 
 if MsgText[1] == 'البايو'   or MsgText[1] == "بايو" then
