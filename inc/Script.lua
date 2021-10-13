@@ -1503,6 +1503,41 @@ local GroupLink = redis:get( boss..'linkGroup'..msg.chat_id_)
 local LinkG = "["..GroupName.."]("..GroupLink..")"
 return 
 sendMsgg(msg.chat_id_,msg.id_,LinkG)
+local inline = {{{text = ta.title_, url=linkgpp.result}},
+
+
+
+
+} 
+
+
+
+
+SendInline(msg.chat_id_,Text,nil,inline,msg.id_/2097152/0.5) 
+
+
+
+
+else 
+
+
+
+
+end 
+
+
+
+
+end,nil) 
+
+
+
+
+end
+
+
+
+
 end
 
 if MsgText[1] == 'البايو'   or MsgText[1] == "بايو" then
