@@ -1495,19 +1495,14 @@ end
 return false
 end 
 
-if text == "الرابط" then
-if not redis:get(boss.."Lock_linkk"..msg.chat_id_) then 
-tdcli_function({ID ="GetChat",chat_id_=msg.chat_id_},function(arg,ta) 
-local linkgpp = json:decode(https.request('https://api.telegram.org/bot'..TokenBot..'/exportChatInviteLink?chat_id='..msg.chat_id_)) or redis:get(boss.."Private:Group:Link"..msg.chat_id_) 
-if linkgpp.ok == true then 
-local Text = '•𝖫𝗂𝗇𝗄 𝖦𝗋𝗈𝗎𝗉 ⇽ \nاستلم رابط\n['..ta.title_..']('..linkgpp.result..')'
-local inline = {{{text = ta.title_, url=linkgpp.result}},
-} 
-SendInline(msg.chat_id_,Text,nil,inline,msg.id_/2097152/0.5) 
-else 
-end 
-end,nil) 
-end
+if MsgText[1] == "الرابط" then
+if not redis:get( boss.."lock_linkk"..msg.chat_id_) then return "⤌الامر معطل من قبل الادارة \n^"  end
+if not redis:get( boss..'linkGroup'..msg.chat_id_) then return "⤌مافيه رابط\n⤌لانشاء رابط ارسل { انشاء رابط } \n" end
+local GroupName = redis:get( boss..'group:name'..msg.chat_id_)
+local GroupLink = redis:get( boss..'linkGroup'..msg.chat_id_)
+local LinkG = "["..GroupName.."]("..GroupLink..")"
+return 
+sendMsgg(msg.chat_id_,msg.id_,LinkG)
 end
 
 if MsgText[1] == 'البايو'   or MsgText[1] == "بايو" then
