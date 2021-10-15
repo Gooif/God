@@ -4281,6 +4281,13 @@ local texs = [[  ‌‌‏‌‌‏‌‌‌‌‏
  {
  {text = "رياضيات",url="https://t.me/gamebot?game=MathBattle"}, {text = "سباق سيارات",url="https://t.me/gamee?game=F1Racer"}, 
  },
+ {text="لعبة الصاروخ",url='https://t.me/T4TTTTBOT?game=rocket'}, {text="لعبة التنين",url='https://t.me/T4TTTTBOT?game=dragon'},
+ },
+ {text="لعبة الافعى",url='https://t.me/T4TTTTBOT?game=snake'} {text="لعبة السهام",url='https://t.me/T4TTTTBOT?game=arrow'},
+ },
+ {text="ورق",url='https://t.me/gamee?game=Hexonix'},{text="Hexonix❌",url='https://t.me/gamee?game=Hexonix'}},
+}
+ },
  }
  
 local msg_id = msg.id_/2097152/0.5
