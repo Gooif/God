@@ -465,56 +465,6 @@ return false
 end
 
 
-
-
-
-if MsgText[1] == "رفع قرد" then
-if not MsgText[2] and msg.reply_id then
-GetMsgInfo(msg.chat_id_,msg.reply_id,function(arg,data)
-if not data.sender_user_id_ then return sendMsg(arg.ChatID,arg.MsgID,"⌔︙  عذرا هذا العضو ليس موجود ضمن المجموعات \n") end
-local UserID = data.sender_user_id_
-if UserID == our_id then return sendMsg(arg.ChatID,arg.MsgID,"⌔︙  لا يمكنك تنفيذ الامر بالرد ع رسالة البوت \n") end
-GetUserID(UserID,function(arg,data)
-ReUsername = ResolveUserName(data)
-NameUser = Hyper_Link_Name(data)
-if redis:sismember(js..'salem:'..arg.ChatID,arg.UserID) then 
-return sendMsg(arg.ChatID,arg.MsgID,"*💠⁞︙* المستخدم  ⇠「 "..NameUser.." 」 \n*💠⁞︙* تم بالتأكيد رفعه قرد فالمجموعه") 
-else
-redis:hset(js..'username:'..arg.UserID,'username',ReUsername)
-redis:sadd(js..'salem:'..arg.ChatID,arg.UserID)
-return sendMsg(arg.ChatID,arg.MsgID,"*💠⁞︙* المستخدم  ⇠「 "..NameUser.." 」 \n*💠⁞︙* تم رفعه قرد في المجموعه") 
-end
-end,{ChatID=arg.ChatID,UserID=UserID,MsgID=arg.MsgID})
-end,{ChatID=msg.chat_id_,MsgID=msg.id_})
-
-
-elseif MsgText[2] and MsgText[2]:match('@[%a%d_]+') then  --BY USERNAME
-GetUserName(MsgText[2],function(arg,data)
-if not data.id_ then return sendMsg(arg.ChatID,arg.MsgID,"⌔︙  لآ يوجد عضـو بهہ‌‏ذآ آلمـعرف \n") end 
-if data.type_.user_ and data.type_.user_.type_.ID == "UserTypeBot" then return sendMsg(arg.ChatID,arg.MsgID,"⌔︙  لا يمكنني رفع حساب بوت \n") end 
-local UserID = data.id_
-NameUser = Hyper_Link_Name(data)
-if UserID == our_id then
-return sendMsg(arg.ChatID,arg.MsgID,"⌔︙  عذرا لا يمكنني رفع البوت \n") 
-elseif data.type_.ID == "ChannelChatInfo" then 
-return sendMsg(arg.ChatID,arg.MsgID,"⌔︙  عذرا هذا معرف قناة وليس حساب \n") 
-end
-UserName = arg.UserName
-if redis:sismember(js..'salem:'..arg.ChatID,UserID) then 
-return sendMsg(arg.ChatID,arg.MsgID,"*💠⁞︙* المستخدم  ⇠「 "..NameUser.." 」 \n*💠⁞︙* تم بالتأكيد رفعه قرد في لمجموعه") 
-end
-redis:hset(js..'username:'..UserID,'username',UserName)
-redis:sadd(js..'salem:'..arg.ChatID,UserID)
-return sendMsg(arg.ChatID,arg.MsgID,"*💠⁞︙* المستخدم  ⇠「 "..NameUser.." 」 \n*💠⁞︙* تم رفعه قرد في الجموعه") 
-end,{ChatID=msg.chat_id_,MsgID=msg.id_,UserName=MsgText[2]})
-elseif MsgText[2] and MsgText[2]:match('^%d+$') then
-GetUserID(MsgText[2],action_by_id,{msg=msg,cmd="raf3salem"})
-end 
-return false
-end
-
-
-
 if MsgText[1] == "رفع مميز" then
 if not msg.Admin then return "⤌هذا الامر يخص ( الادمن,المدير,المنشئ,المطور ) بس  \n" end
 if not MsgText[2] and msg.reply_id then
@@ -1541,11 +1491,27 @@ end
 if MsgText[1] == "الرابط" then
 if not redis:get( boss.."lock_linkk"..msg.chat_id_) then return "⤌الامر معطل من قبل الادارة \n^"  end
 if not redis:get( boss..'linkGroup'..msg.chat_id_) then return "⤌مافيه رابط\n⤌لانشاء رابط ارسل { انشاء رابط } \n" end
-local GroupName = redis:get( boss..'group:name'..msg.chat_id_)
-local GroupLink = redis:get( boss..'linkGroup'..msg.chat_id_)
-local LinkG = "["..GroupName.."]("..GroupLink..")"
-return 
+local GroupName = redis:get(boss..'group:name'..msg.chat_id_)
+local GroupLink = redis:get(boss..'linkGroup'..msg.chat_id_)
+local LinkG = " ["..GroupName.."]("..GroupLink..") "
+return
 sendMsgg(msg.chat_id_,msg.id_,LinkG)
+end
+
+if MsgText[1] == "الرابط خاص" then
+if not msg.Admin then return "✿*│*هذا الامر يخص { الادمن,المدير,المنشئ,المالك,المطور } فقط  \n✿" end
+local GroupLink = redis:get(boss..'linkGroup'..msg.chat_id_)
+if not GroupLink then return "✿*╿* اوه 🙀 لا يوجد هنا رابط\n✿╽* اكتب [ضع رابط]*🔃" end
+local Text = "✿╿رابـط الـمـجـمـوعه ✿\n✿╽"..Flter_Markdown(redis:get(mero..'group:name'..msg.chat_id_)).." :\n\n["..GroupLink.."]\n"
+local info, res = https.request(ApiToken..'/sendMessage?chat_id='..msg.sender_user_id_..'&text='..URL.escape(Text)..'&disable_web_page_preview=true&parse_mode=Markdown')
+if res == 403 then
+return "✿*╿*عذرا عزيزي \n✿╽لم استطيع ارسالك الرابط لانك قمت بحظر البوت\n!"
+elseif res == 400 then
+return "✿*╿*عذرا عزيزي \n✿╽ لم استطيع ارسالك الرابط يجب عليك مراسله البوت اولا \n!"
+end
+if res == 200 then 
+return "✿*╿*أهلا عزيزي "..msg.TheRankCmd.."  \n✿╽تم ارسال الرابط خاص لك 🔃"
+end
 end
 
 if MsgText[1] == 'البايو'   or MsgText[1] == "بايو" then
