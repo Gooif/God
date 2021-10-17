@@ -533,7 +533,7 @@ if not redis:sismember(boss..'whitelist:'..arg.ChatID,arg.UserID) then
 sendMsg(arg.ChatID,arg.MsgID,"• العضو「 "..NameUser.." 」 \n• مو مميز من قبل \n𓍦") 
 else
 redis:srem(boss..'whitelist:'..arg.ChatID,arg.UserID)
-sendMsg(arg.ChatID,arg.MsgID,"• العضو「 "..NameUser.." 」 \n• تم تنزيل من االمميز \n𓍦") 
+sendMsg(arg.ChatID,arg.MsgID,"• العضو「 "..NameUser.." 」 \n• ابشر نزلته من االمميز \n𓍦") 
 end
 end,{ChatID=arg.ChatID,UserID=UserID,MsgID=arg.MsgID})
 end,{ChatID=msg.chat_id_,MsgID=msg.id_})
@@ -550,7 +550,7 @@ if not redis:sismember(boss..'whitelist:'..arg.ChatID,UserID) then
 return sendMsg(arg.ChatID,arg.MsgID,"• العضو「 "..NameUser.." 」 \n• مو مميز من قبل \n𓍦")
 else
 redis:srem(boss..'whitelist:'..arg.ChatID,UserID)
-return sendMsg(arg.ChatID,arg.MsgID,"• العضو「 "..NameUser.." 」 \n• تم تنزيل من االمميز \n𓍦") 
+return sendMsg(arg.ChatID,arg.MsgID,"• العضو「 "..NameUser.." 」 \n• ابشر نزلته من االمميز \n𓍦") 
 end
 end,{ChatID=msg.chat_id_,MsgID=msg.id_,UserName=MsgText[2]})
 elseif MsgText[2] and MsgText[2]:match('^%d+$') then
@@ -621,7 +621,7 @@ if not redis:sismember(boss..'owners:'..arg.ChatID,arg.UserID) then
 sendMsg(arg.ChatID,arg.MsgID,"• العضو「 "..NameUser.." 」 \n• مو مدير من قبل \n𓍦") 
 else
 redis:srem(boss..'owners:'..arg.ChatID,arg.UserID)
-sendMsg(arg.ChatID,arg.MsgID,"• العضو「 "..NameUser.." 」 \n• تم تنزيل من المدير \n𓍦") 
+sendMsg(arg.ChatID,arg.MsgID,"• العضو「 "..NameUser.." 」 \n• ابشر نزلته من المدير \n𓍦") 
 end
 end,{ChatID=arg.ChatID,UserID=UserID,MsgID=arg.MsgID})
 end,{ChatID=msg.chat_id_,MsgID=msg.id_})
@@ -639,7 +639,7 @@ if not redis:sismember(boss..'owners:'..arg.ChatID,UserID) then
 sendMsg(arg.ChatID,arg.MsgID,"• العضو「 "..NameUser.." 」 \n• مو مدير من قبل \n𓍦")  
 else
 redis:srem(boss..'owners:'..arg.ChatID,UserID)
-sendMsg(arg.ChatID,arg.MsgID,"• العضو「 "..NameUser.." 」 \n• تم تنزيل من المدير \n𓍦") 
+sendMsg(arg.ChatID,arg.MsgID,"• العضو「 "..NameUser.." 」 \n• ابشر نزلته من المدير \n𓍦") 
 end
 end,{ChatID=msg.chat_id_,MsgID=msg.id_,UserName=MsgText[2]})
 elseif MsgText[2] and MsgText[2]:match('^%d+$') then
@@ -716,7 +716,7 @@ if not redis:sismember(boss..':MONSHA_BOT:'..arg.ChatID,arg.UserID) then
 return sendMsg(arg.ChatID,arg.MsgID,"• العضو「 "..NameUser.." 」 \n• مو منشئ من قبل \n𓍦") 
 else
 redis:srem(boss..':MONSHA_BOT:'..arg.ChatID,arg.UserID)
-return sendMsg(arg.ChatID,arg.MsgID,"• العضو「 "..NameUser.." 」 \n• تم تنزيل من المنشئ \n𓍦") 
+return sendMsg(arg.ChatID,arg.MsgID,"• العضو「 "..NameUser.." 」 \n• ابشر نزلته من المنشئ \n𓍦") 
 end
 end,{ChatID=ChatID,UserID=UserID,MsgID=MsgID})
 end,{ChatID=msg.chat_id_,MsgID=msg.id_})
@@ -732,7 +732,7 @@ if not redis:sismember(boss..':MONSHA_BOT:'..arg.ChatID,UserID) then
 return sendMsg(arg.ChatID,arg.MsgID,"• العضو「 "..NameUser.." 」 \n• مو منشئ من قبل \n𓍦") 
 else
 redis:srem(boss..':MONSHA_BOT:'..arg.ChatID,UserID)
-return sendMsg(arg.ChatID,arg.MsgID,"• العضو「 "..NameUser.." 」 \n• تم تنزيل من المنشئ \n𓍦") 
+return sendMsg(arg.ChatID,arg.MsgID,"• العضو「 "..NameUser.." 」 \n• ابشر نزلته من المنشئ \n𓍦") 
 end
 end,{ChatID=msg.chat_id_,MsgID=msg.id_,UserName=MsgText[2]})
 elseif MsgText[2] and MsgText[2]:match('^%d+$') then
@@ -805,7 +805,7 @@ if not redis:sismember(boss..'admins:'..arg.ChatID,arg.UserID) then
 sendMsg(arg.ChatID,arg.MsgID,"• العضو「 "..NameUser.." 」 \n• مو ادمن من قبل \n𓍦") 
 else
 redis:srem(boss..'admins:'..arg.ChatID,arg.UserID)
-sendMsg(arg.ChatID,arg.MsgID,"• العضو「 "..NameUser.." 」 \n• تم تنزيل من الادمن \n𓍦") 
+sendMsg(arg.ChatID,arg.MsgID,"• العضو「 "..NameUser.." 」 \n• ابشر نزلته من الادمن \n𓍦") 
 end
 end,{ChatID=arg.ChatID,UserID=UserID,MsgID=arg.MsgID})
 end,{ChatID=msg.chat_id_,MsgID=msg.id_})
@@ -820,7 +820,7 @@ if not redis:sismember(boss..'admins:'..arg.ChatID,UserID) then
 sendMsg(arg.ChatID,arg.MsgID,"• العضو「 "..NameUser.." 」 \n• مو ادمن من قبل \n𓍦") 
 else
 redis:srem(boss..'admins:'..arg.ChatID,UserID)
-sendMsg(arg.ChatID,arg.MsgID,"• العضو「 "..NameUser.." 」 \n• تم تنزيل من الادمن \n𓍦") 
+sendMsg(arg.ChatID,arg.MsgID,"• العضو「 "..NameUser.." 」 \n• ابشر نزلته من الادمن \n𓍦") 
 end
 end,{ChatID=msg.chat_id_,MsgID=msg.id_,UserName=MsgText[2]})
 elseif MsgText[2] and MsgText[2]:match('^%d+$') then
@@ -1188,7 +1188,7 @@ redis:srem(boss..':MONSHA_BOT:'..arg.ChatID,arg.UserID)
 redis:srem(boss..'owners:'..arg.ChatID,arg.UserID)
 redis:srem(boss..'admins:'..arg.ChatID,arg.UserID)
 redis:srem(boss..'whitelist:'..arg.ChatID,arg.UserID)
-sendMsg(arg.ChatID,arg.MsgID,"• العضو「 "..NameUser.." 」 \n• تم تنزيله من مشرفين المجموعه") 
+sendMsg(arg.ChatID,arg.MsgID,"• العضو「 "..NameUser.." 」 \n• ابشر نزلتهه من مشرفين المجموعه") 
 end,{ChatID=arg.ChatID,UserID=UserID,MsgID=arg.MsgID})
 end,{ChatID=msg.chat_id_,MsgID=msg.id_})
 elseif MsgText[2] and MsgText[2]:match('@[%a%d_]+') then 
@@ -1204,7 +1204,7 @@ redis:srem(boss..':MONSHA_BOT:'..arg.ChatID,UserID)
 redis:srem(boss..'owners:'..arg.ChatID,UserID)
 redis:srem(boss..'admins:'..arg.ChatID,UserID)
 redis:srem(boss..'whitelist:'..arg.ChatID,UserID)
-sendMsg(arg.ChatID,arg.MsgID,"• العضو「 "..NameUser.." 」 \n• تم تنزيله من مشرفين المجموعه") 
+sendMsg(arg.ChatID,arg.MsgID,"• العضو「 "..NameUser.." 」 \n• ابشر نزلتهه من مشرفين المجموعه") 
 end,{ChatID=msg.chat_id_,MsgID=msg.id_})
 
 elseif MsgText[2] and MsgText[2]:match('^%d+$') then 
@@ -2555,7 +2555,7 @@ NameUser = Hyper_Link_Name(data)
 if not redis:sismember(boss..':Malk_Group:'..arg.ChatID,arg.UserID) then 
 sendMsg(arg.ChatID,arg.MsgID,"• العضو「 "..NameUser.." 」 \n• مو مالك اساسي من قبل \n𓍦") 
 else
-sendMsg(arg.ChatID,arg.MsgID,"• العضو「 "..NameUser.." 」 \n• تم تنزيل من المالك الاساسي \n𓍦") 
+sendMsg(arg.ChatID,arg.MsgID,"• العضو「 "..NameUser.." 」 \n• ابشر نزلته من المالك الاساسي \n𓍦") 
 redis:srem(boss..':Malk_Group:'..arg.ChatID,arg.UserID)
 end  
 end,{ChatID=arg.ChatID,UserID=UserID,MsgID=arg.MsgID})
@@ -2572,7 +2572,7 @@ if not redis:sismember(boss..':Malk_Group:'..arg.ChatID,UserID) then
 sendMsg(arg.ChatID,arg.MsgID,"• العضو「 "..NameUser.." 」 \n• مو مالك اساسي من قبل \n𓍦") 
 else
 redis:srem(boss..':Malk_Group:'..arg.ChatID,UserID)
-sendMsg(arg.ChatID,arg.MsgID,"• العضو「 "..NameUser.." 」 \n• تم تنزيل من المالك الاساسي \n𓍦")
+sendMsg(arg.ChatID,arg.MsgID,"• العضو「 "..NameUser.." 」 \n• ابشر نزلته من المالك الاساسي \n𓍦")
 end
 end,{ChatID=msg.chat_id_,MsgID=msg.id_,UserName=MsgText[2]})
 end 
@@ -2647,7 +2647,7 @@ NameUser = Hyper_Link_Name(data)
 if not redis:sismember(boss..':MONSHA_Group:'..arg.ChatID,arg.UserID) then 
 sendMsg(arg.ChatID,arg.MsgID,"• العضو「 "..NameUser.." 」 \n• مو مالك من قبل \n𓍦") 
 else
-sendMsg(arg.ChatID,arg.MsgID,"• العضو「 "..NameUser.." 」 \n• تم تنزيل من المالك \n𓍦") 
+sendMsg(arg.ChatID,arg.MsgID,"• العضو「 "..NameUser.." 」 \n• ابشر نزلته من المالك \n𓍦") 
 redis:srem(boss..':MONSHA_Group:'..arg.ChatID,arg.UserID)
 end  
 end,{ChatID=arg.ChatID,UserID=UserID,MsgID=arg.MsgID})
@@ -2666,7 +2666,7 @@ if not redis:sismember(boss..':MONSHA_Group:'..arg.ChatID,UserID) then
 sendMsg(arg.ChatID,arg.MsgID,"• العضو「 "..NameUser.." 」 \n• مو مالك من قبل \n𓍦") 
 else
 redis:srem(boss..':MONSHA_Group:'..arg.ChatID,UserID)
-sendMsg(arg.ChatID,arg.MsgID,"• العضو「 "..NameUser.." 」 \n• تم تنزيل من المالك \n𓍦")
+sendMsg(arg.ChatID,arg.MsgID,"• العضو「 "..NameUser.." 」 \n• ابشر نزلته من المالك \n𓍦")
 end
 end,{ChatID=msg.chat_id_,MsgID=msg.id_,UserName=MsgText[2]})
 end 
@@ -2740,7 +2740,7 @@ rinkuser = 8
 else
 rinkuser = 9
 end
-local DonisDown = "\n• تم تنزيله من الرتب الاتيه : \n\n "
+local DonisDown = "\n• ابشر نزلتهه من الرتب الاتيه : \n\n "
 if redis:sismember(boss..':SUDO_BOT:',UserID) then 
 DonisDown = DonisDown.."•  المطور \n"
 end 
@@ -2856,7 +2856,7 @@ rinkuser = 8
 else
 rinkuser = 9
 end
-local DonisDown = "\n• تم تنزيله من الرتب الاتيه : \n\n "
+local DonisDown = "\n• ابشر نزلتهه من الرتب الاتيه : \n\n "
 if redis:sismember(boss..':SUDO_BOT:',UserID) then 
 DonisDown = DonisDown.."•  المطور \n"
 end 
@@ -3115,7 +3115,7 @@ NameUser = Hyper_Link_Name(data)
 if not redis:sismember(boss..':SUDO_BOT:',arg.UserID) then 
 sendMsg(arg.ChatID,arg.MsgID,"• العضو「 "..NameUser.." 」 \n• مو مطور من قبل \n𓍦") 
 else
-sendMsg(arg.ChatID,arg.MsgID,"• العضو「 "..NameUser.." 」 \n• تم تنزيله مطور") 
+sendMsg(arg.ChatID,arg.MsgID,"• العضو「 "..NameUser.." 」 \n• ابشر نزلتهه مطور") 
 redis:srem(boss..':SUDO_BOT:',arg.UserID)
 end  
 end,{ChatID=arg.ChatID,UserID=UserID,MsgID=arg.MsgID})
@@ -3132,7 +3132,7 @@ if not redis:sismember(boss..':SUDO_BOT:',UserID) then
 sendMsg(arg.ChatID,arg.MsgID,"• العضو「 "..NameUser.." 」 \n• مو مطور من قبل \n𓍦") 
 else
 redis:srem(boss..':SUDO_BOT:',UserID)
-sendMsg(arg.ChatID,arg.MsgID,"• العضو「 "..NameUser.." 」 \n• تم تنزيله مطور") 
+sendMsg(arg.ChatID,arg.MsgID,"• العضو「 "..NameUser.." 」 \n• ابشر نزلتهه مطور") 
 end
 end,{ChatID=msg.chat_id_,MsgID=msg.id_,UserName=MsgText[2]})
 end 
