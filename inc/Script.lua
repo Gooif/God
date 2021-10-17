@@ -1498,21 +1498,6 @@ return
 sendMsgg(msg.chat_id_,msg.id_,LinkG)
 end
 
-if MsgText[1] == "الرابط خاص" then
-if not msg.Admin then return "✿*│*هذا الامر يخص { الادمن,المدير,المنشئ,المالك,المطور } فقط  \n✿" end
-local GroupLink = redis:get(boss..'linkGroup'..msg.chat_id_)
-if not GroupLink then return "✿*╿* اوه 🙀 لا يوجد هنا رابط\n✿╽* اكتب [ضع رابط]*🔃" end
-local Text = "✿╿رابـط الـمـجـمـوعه ✿\n✿╽"..Flter_Markdown(redis:get(Boss..'group:name'..msg.chat_id_)).." :\n\n["..GroupLink.."]\n"
-local info, res = https.request(ApiToken..'/sendMessage?chat_id='..msg.sender_user_id_..'&text='..URL.escape(Text)..'&disable_web_page_preview=true&parse_mode=Markdown')
-if res == 403 then
-return "✿*╿*عذرا عزيزي \n✿╽لم استطيع ارسالك الرابط لانك قمت بحظر البوت\n!"
-elseif res == 400 then
-return "✿*╿*عذرا عزيزي \n✿╽ لم استطيع ارسالك الرابط يجب عليك مراسله البوت اولا \n!"
-end
-if res == 200 then 
-return "✿*╿*أهلا عزيزي "..msg.TheRankCmd.."  \n✿╽تم ارسال الرابط خاص لك 🔃"
-end
-end
 
 if MsgText[1] == 'البايو'   or MsgText[1] == "بايو" then
   if msg.reply_id then 
