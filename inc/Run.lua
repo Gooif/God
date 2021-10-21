@@ -79,7 +79,7 @@ boss..":VERSION","1.0",
 boss..":SUDO_ID:",SUDO_USER,
 boss..":DataCenter:","Amsterdam",
 boss..":UserNameBot:",BOT_User,
-boss..":ApiSource","SourcGod",
+boss..":ApiSource","Sourcee6ee",
 boss..":NameBot:","باريس",
 "TH3BOSS_INSTALL","Yes"
 )
