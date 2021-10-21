@@ -1102,10 +1102,10 @@ Name = data.first_name_ .." "..data.last_name_
 else 
 Name = data.first_name_ 
 end
-usernn = data.username_ or "RNNNI"
+usernn = data.username_ or "EE6EE"
 else 
 Name = data.title_
-usernn = data.type_.user_.username_ or "RNNNI"
+usernn = data.type_.user_.username_ or "EE6EE"
 end
 Name = Name:gsub('[[][]]','')
 Name = FlterName(Name,10)
@@ -2036,7 +2036,7 @@ local info = redis:hgetall(boss..'username:'..v)
 if info and info.username and info.username:match("@[%a%d_]+") then
 message = message ..k.. '-  ['..info.username..'] ࿈ (`' ..v.. '`) \n'
 else
-message = message ..k.. '-['..info.username..'](t.me/rnnni) l ࿈ (`' ..v.. '`) \n'
+message = message ..k.. '-['..info.username..'](t.me/LIINN8) l ࿈ (`' ..v.. '`) \n'
 end
 end 
 if utf8.len(message) > 4096 then
@@ -2375,9 +2375,9 @@ end
 if arg.lock_servicez then 
 sendMsg(arg.chat_id_,arg.id_,' ⤌ من 「 '..NameUser..' 」\n⤌ فعلت المجموعة ورفعت كل الادمن \n⤌ اضغط هنا /Commands')
 else
-sendMsg(arg.chat_id_,arg.id_,'⤌ من「 '..NameUser..' 」\n⤌ فعلت المجموعة ورفعت كل الادمن\n⤌ ارسل /Commands')
+sendMsg(arg.chat_id_,arg.id_,'⤌ من「 '..NameUser..' 」\n⤌ ابشر تم التفعيل\n⤌ ارسل /Commands')
 end
-⤌ اضغط هنا [/commands](https://t.me/@D82iBot?start=commands)
+
 GetChannelAdministrators(arg.chat_id_,function(arg,data)
 for k,v in pairs(data.members_) do
 if data.members_[k].status_.ID == "ChatMemberStatusCreator" then
