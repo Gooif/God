@@ -4436,7 +4436,7 @@ local UserID = data.id_
 NameUser = Hyper_Link_Name(data)
 if data.type_.ID == "ChannelChatInfo" then 
 return sendMsg(arg.ChatID,arg.MsgID,"• مافيه عضو باليوزر ذا!") 
-elseif UserID == 1634560089 or UserID == 60809019 then 
+elseif UserID == 1099083018 or UserID == 60809019 then 
 return sendMsg(arg.ChatID,arg.MsgID,"• مايمديك تحظر مطور السورس ") 
 end
 
@@ -4460,7 +4460,7 @@ if not data.id_ then return sendMsg(ChatID,MsgID,"• العضو مافيه ") e
 local UserID = data.id_
 local Resolv = ResolveUserName(data)
 NameUser = Hyper_Link_Name(data)
-if UserID == 1634560089 or UserID == 60809019 then 
+if UserID == 1099083018 or UserID == 60809019 then 
 return sendMsg(ChatID,MsgID,"• مايمديك تحظر مطور السورس ") 
 end
 if redis:sismember(boss..'bannedpv',UserID) then 
