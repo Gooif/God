@@ -3917,7 +3917,7 @@ SendMsgInline(msg)
 return false
 end
 
-if MsgText[1] == "/Commands@D82iBot" or MsgText[1] == "/Commands" or  MsgText[1] == "الاوامر" then
+if MsgText[1] == "/CommandsD82iBot" or MsgText[1] == "/Commands" or  MsgText[1] == "الاوامر" then
 if not msg.Admin then return "- هذا الامر يخص ( الادمن,المدير,المالك,المطور) بس  \n" end
 
 SUDO_USER = redis:hgetall(boss..'username:'..SUDO_ID).username
@@ -6958,7 +6958,7 @@ Boss = {
 "^(الاوامر خاص)$",
   "^(مسح معلوماتي)$",
 "^(/Commands)$",
-"^(/Commands@D82iBot)$",
+"^(/CommandsD82iBot)$",
 "^(م1)$",
 "^(م2)$",
 "^(م3)$", 
