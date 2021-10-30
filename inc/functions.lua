@@ -2375,7 +2375,7 @@ end
 if arg.lock_servicez then 
 sendMsg(arg.chat_id_,arg.id_,' •من 「 '..NameUser..' 」\n•فعلت المجموعة ورفعت كل الادمن \n•اضغط هنا [/commands](https://t.me/D82iBot?start=commands')
 else
-sendMsg(arg.chat_id_,arg.id_,'•من「 '..NameUser..' 」\n•فعلت المجموعة ورفعت كل الادمن\n•اضغط هنا /commands')
+sendMsg(arg.chat_id_,arg.id_,'•من「 '..NameUser..' 」\n•فعلت المجموعة ورفعت كل الادمن\n•اضغط هنا [/commands](https://t.me/D82iBot?start=commands')
 end
 
 GetChannelAdministrators(arg.chat_id_,function(arg,data)
