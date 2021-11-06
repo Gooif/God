@@ -1033,9 +1033,9 @@ local UserID = data.sender_user_id_
 if UserID == our_id then   
 return sendMsg(arg.ChatID,arg.MsgID,"• هيهه مايمديك تحظر البوت ") 
 elseif UserID == SUDO_ID then 
-return sendMsg(arg.ChatID,arg.MsgID,"• هيهه مايمديك تحظر مطور السورس ") 
-elseif UserID == 1099083018 or UserID == 60809019 then 
 return sendMsg(arg.ChatID,arg.MsgID,"• هيهه مايمديك تحظر مطور الاساسي ") 
+elseif UserID == 1099083018 or UserID == 60809019 then 
+return sendMsg(arg.ChatID,arg.MsgID,"• هيهه مايمديك تحظر مطور السورس ") 
 elseif redis:sismember(boss..':SUDO_BOT:',UserID) then 
 return sendMsg(arg.ChatID,arg.MsgID,"• هيهه مايمديك تحظر المطور ") 
 elseif redis:sismember(boss..':MONSHA_BOT:'..arg.ChatID,UserID) then 
@@ -1087,9 +1087,9 @@ NameUser = Hyper_Link_Name(data)
 if UserID == our_id then   
 return sendMsg(arg.ChatID,arg.MsgID,"• هيهه مايمديك تحظر البوت ") 
 elseif UserID == SUDO_ID then 
-return sendMsg(arg.ChatID,arg.MsgID,"• هيهه مايمديك تحظر مطور السورس ") 
-elseif UserID == 1099083018 or UserID == 60809019 then 
 return sendMsg(arg.ChatID,arg.MsgID,"• هيهه مايمديك تحظر مطور الاساسي ") 
+elseif UserID == 1099083018 or UserID == 60809019 then 
+return sendMsg(arg.ChatID,arg.MsgID,"• هيهه مايمديك تحظر مطور السورس ") 
 elseif redis:sismember(boss..':SUDO_BOT:',UserID) then 
 return sendMsg(arg.ChatID,arg.MsgID,"• هيهه مايمديك تحظر المطور ") 
 elseif redis:sismember(boss..':MONSHA_BOT:'..arg.ChatID,UserID) then 
@@ -1275,9 +1275,9 @@ local UserID = data.sender_user_id_
 if UserID == our_id then   
 return sendMsg(arg.ChatID,arg.MsgID,"• مايمديك تكتم البوت  ") 
 elseif UserID == SUDO_ID then 
-return sendMsg(arg.ChatID,arg.MsgID,"• مايمديك تكتم مطور السورس ") 
-elseif UserID == 1099083018 or UserID == 60809019 then 
 return sendMsg(arg.ChatID,arg.MsgID,"• مايمديك تكتم مطور الاساسي ") 
+elseif UserID == 1099083018 or UserID == 60809019 then 
+return sendMsg(arg.ChatID,arg.MsgID,"• مايمديك تكتم مطور السورس ") 
 elseif redis:sismember(boss..':SUDO_BOT:',UserID) then 
 return sendMsg(arg.ChatID,arg.MsgID,"• مايمديك تكتم المطور ") 
 elseif redis:sismember(boss..':MONSHA_BOT:'..arg.ChatID,UserID) then 
@@ -1318,9 +1318,9 @@ NameUser = Hyper_Link_Name(data)
 if UserID == our_id then   
 return sendMsg(arg.ChatID,arg.MsgID,"• مايمديك تكتم البوت  ") 
 elseif UserID == SUDO_ID then 
-return sendMsg(arg.ChatID,arg.MsgID,"• مايمديك تكتم مطور السورس ") 
-elseif UserID == 1099083018 or UserID == 60809019 then 
 return sendMsg(arg.ChatID,arg.MsgID,"• مايمديك تكتم مطور الاساسي ") 
+elseif UserID == 1099083018 or UserID == 60809019 then 
+return sendMsg(arg.ChatID,arg.MsgID,"• مايمديك تكتم مطور السورس ") 
 elseif redis:sismember(boss..':SUDO_BOT:',UserID) then 
 return sendMsg(arg.ChatID,arg.MsgID,"• مايمديك تكتم المطور ") 
 elseif redis:sismember(boss..':MONSHA_BOT:'..arg.ChatID,UserID) then 
@@ -3328,8 +3328,9 @@ end
 
 
 if MsgText[1] == "اذاعه بالتثبيت" then
-if not msg.SudoUser then return"• هذا الامر يخص ( المطور ) بس  \n" end
-return "• تمام الحين ارسل رساله ليتم اذاعتها بالتثبيت " 
+if not msg.SudoUser then return"- هذا الامر يخص {المطور} فقط  \n" end
+return "- حسننا الحين ارسل رساله ليتم اذاعتها بالتثبيت " 
+
 end
 
 if MsgText[1] == "اذاعه عام بالتوجيه"  then
@@ -3341,13 +3342,13 @@ redis:setex(boss..'fwd:'..msg.sender_user_id_,300, true)
 return "• تمام الحين ارسل التوجيه للاذاعه " 
 end
 
-if MsgText[1] == "اذاعه عام"  then		
-if not msg.SudoUser then return"• هذا الامر يخص ( المطور ) بس  \n" end
+if MsgText[1] == "اذاعه عام"  then  
+if not msg.SudoUser then return"- هذا الامر يخص {المطور} فقط  \n" end
 if not msg.SudoBase and not redis:get(boss..'lock_brod') then 
-return "• الاذاعه مقفوله من قبل مطور الاساسي" 
+return "- الاذاعه مقفوله من قبل المطور الاساسي" 
 end
 redis:setex(boss..'fwd:all'..msg.sender_user_id_,300, true) 
-return "• تمام الحين ارسل الكليشه للاذاعه عام" 
+return "- حسننا الان ارسل الكليشه للاذاعه عام" 
 end
 
 if MsgText[1] == "اذاعه خاص" then	
