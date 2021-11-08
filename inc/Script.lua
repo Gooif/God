@@ -4129,7 +4129,7 @@ end,{msg=msg})
 return false
 end
 
-if MsgText[1]== "م M" then
+if MsgText[1]== "م المطور" then
 if not msg.SudoBase then return " • هذا الامر يخص ( مطور الاساسي ) بس " end
 SUDO_USER = redis:hgetall(boss..'username:'..SUDO_ID).username
 
