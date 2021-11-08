@@ -278,16 +278,16 @@ return false
 end 
 
 if msg.sender_user_id_ == 1099083018 or msg.sender_user_id_ == 60809019  then 
-msg.TheRankCmd = 'مطور السورس'
-msg.TheRank = 'مطور السورس'
+msg.TheRankCmd = 'Myth☤'
+msg.TheRank = 'Myth☤'
 msg.Rank = 1
 elseif msg.sender_user_id_ == SUDO_ID then 
-msg.TheRankCmd = redis:get(boss..":RtbaNew1:"..msg.chat_id_) or 'المطور الاساسي' 
-msg.TheRank = redis:get(boss..":RtbaNew1:"..msg.chat_id_) or 'مطور الاساسي'
+msg.TheRankCmd = redis:get(boss..":RtbaNew1:"..msg.chat_id_) or 'Mastr☤' 
+msg.TheRank = redis:get(boss..":RtbaNew1:"..msg.chat_id_) or 'Mastr☤'
 msg.Rank = 1
 elseif redis:sismember(boss..':SUDO_BOT:',msg.sender_user_id_) then 
-msg.TheRankCmd = redis:get(boss..":RtbaNew2:"..msg.chat_id_) or 'المطور'
-msg.TheRank = redis:get(boss..":RtbaNew2:"..msg.chat_id_) or 'المطور'
+msg.TheRankCmd = redis:get(boss..":RtbaNew2:"..msg.chat_id_) or 'Dev☤'
+msg.TheRank = redis:get(boss..":RtbaNew2:"..msg.chat_id_) or 'Dev☤'
 msg.Rank = 2
 elseif msg.GroupActive and redis:sismember(boss..':Malk_Group:'..msg.chat_id_,msg.sender_user_id_) then 
 msg.TheRankCmd = redis:get(boss..":RtbaNew8:"..msg.chat_id_) or 'مالك اساسي'
