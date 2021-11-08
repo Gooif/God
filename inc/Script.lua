@@ -60,7 +60,7 @@ end
 GetPhotoUser(data.id_,function(arg,data)
 local edited = (redis:get(boss..':edited:'..arg.chat_id_..':'..arg.sender_user_id_) or 0)
 
-local KleshaID = '↭↭ '..RandomText()..'\n\n- اســمـك  ‹ '..arg.Namei..'  › \n'
+local KleshaID = '↭↭ '..RandomText()..'\n\n - اســمـك  ‹ '..arg.Namei..'  › \n'
 ..'- ايديــك  ‹ '..arg.sender_user_id_..' › \n'
 ..arg.UserNameID
 ..'- رتبتـــك  ‹  '..arg.TheRank..'  › \n'
@@ -3937,6 +3937,7 @@ end
 *⇜ هلا فيك في اوامر البوت‏‌‌‏‌‌‌‌‏*
 ]]
 msg.textmsg = [[للاستفسار - []]..SUDO_USER..[[]
+
 msg.KeyboardCmd = keyboardCmd
 SendMsgInline(msg)
 end,{msg=msg})
