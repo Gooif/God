@@ -4262,7 +4262,7 @@ end
 
 end 
 
-if MsgText[1] == "الاغاني" or MsgText[1]=="الاغاني" then
+if MsgText[1] == "التسليه" or MsgText[1]=="التسليه" then
 return [[
 *اهلين عيني في اوامر الاغاني*
 ————————————————————
