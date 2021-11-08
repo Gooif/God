@@ -42,7 +42,7 @@ if redis:get(boss..'lock_id'..msg.chat_id_) then
 GetUserID(msg.sender_user_id_,function(arg,data)
 
 local msgs = redis:get(boss..'msgs:'..msg.sender_user_id_..':'..msg.chat_id_) or 1
-if data.username_ then UserNameID = "🎫꒐ مـعرفك  ‹  @"..data.username_.."  › \n" else UserNameID = "" end
+if data.username_ then UserNameID = "- مـعرفك  ‹  @"..data.username_.."  › \n" else UserNameID = "" end
 if data.username_ then UserNameID1 = "@"..data.username_ else UserNameID1 = "مافيه" end
 if data.last_name_ then Name = data.first_name_ .." "..data.last_name_ else Name = data.first_name_ end
 local Namei = FlterName(data,20)
@@ -60,8 +60,8 @@ end
 GetPhotoUser(data.id_,function(arg,data)
 local edited = (redis:get(boss..':edited:'..arg.chat_id_..':'..arg.sender_user_id_) or 0)
 
-local KleshaID = '↭↭ '..RandomText()..'\n\n👤꒐ اســمـك  ‹ '..arg.Namei..'  › \n'
-..'• ايديــك  ‹ '..arg.sender_user_id_..' › \n'
+local KleshaID = '↭↭ '..RandomText()..'\n\n- اســمـك  ‹ '..arg.Namei..'  › \n'
+..'- ايديــك  ‹ '..arg.sender_user_id_..' › \n'
 ..arg.UserNameID
 ..'- رتبتـــك  ‹  '..arg.TheRank..'  › \n'
 ..'تفاعلك  ‹  '..Get_Ttl(arg.msgs)..' › \n'
@@ -3922,9 +3922,10 @@ if MsgText[1] == "/CommandsD82iBot" or MsgText[1] == "/Commands" or  MsgText[1] 
 if not msg.Admin then return "- هذا الامر يخص ( الادمن,المدير,المالك,المطور) بس  \n" end
 
 SUDO_USER = redis:hgetall(boss..'username:'..SUDO_ID).username
+⇜ هلا فيك في اوامر البوت 
+]]
 text = [[للاستفسار - []]..SUDO_USER..[[]
-*⇜ هلا فيك في اوامر البوت *
-  ]]
+
 GetUserID(msg.sender_user_id_,function(arg,data)
 msg = arg.msg
 local textD = redis:get(boss..":awamer_Klesha_m:")
@@ -3933,9 +3934,9 @@ textD = Flter_Markdown(convert_Klmat(msg,data,textD,true))
 else
 textD = text
 end
-msg.textmsg = [[للاستفسار - []]..SUDO_USER..[[]
 *⇜ هلا فيك في اوامر البوت‏‌‌‏‌‌‌‌‏*
 ]]
+msg.textmsg = [[للاستفسار - []]..SUDO_USER..[[]
 msg.KeyboardCmd = keyboardCmd
 SendMsgInline(msg)
 end,{msg=msg})
@@ -3949,13 +3950,13 @@ SUDO_USER = redis:hgetall(boss..'username:'..SUDO_ID).username
 local text = [[  *اوامر الاداره*  
 للاستفسار - []]..SUDO_USER..[[]
  *اوامر الرفع والتنزيل*
-•  مالك اساسي    ( رفع ⟺  تنزيل )
-•  مالك               ( رفع ⟺  تنزيل )
-•  مشرف            ( رفع ⟺  تنزيل )
-•  مدير               ( رفع ⟺  تنزيل )
-• ادمن              ( رفع ⟺  تنزيل )
-•  مميز              ( رفع ⟺  تنزيل )
-•  تنزيل الكل ⤌ لأزاله جميع الرتب أعلاه
+•  مالك اساسي    ( رفع —  تنزيل )
+•  مالك               ( رفع —  تنزيل )
+•  مشرف            ( رفع —  تنزيل )
+•  مدير               ( رفع —  تنزيل )
+• ادمن              ( رفع —  تنزيل )
+•  مميز              ( رفع —  تنزيل )
+•  تنزيل الكل — لأزاله جميع الرتب أعلاه
 ——————————————
  *اوامر المسح*  
 •   مسح المالك اساسيين الاساسيين
@@ -4021,19 +4022,19 @@ local text = [[للاستفسار - []]..SUDO_USER..[[]
  *اوامر رؤية الاعدادات*  
 • المطورين
 • المالكين الاساسين
-• المالكين 
-• المدراء
-• الادمنيه
-• المميزين
-• المحظورين
-• القوانين
-• المكتومين
-• المطور 
-•  معلوماتي 
-• الحمايه  
-• الوسائط
-• الاعدادت
-• المجموعه]]
+— المالكين 
+— المدراء
+— الادمنيه
+— المميزين
+— المحظورين
+— القوانين
+— المكتومين
+— المطور 
+—  معلوماتي 
+— الحمايه  
+— الوسائط
+— الاعدادت
+— المجموعه]]
 
 GetUserID(msg.sender_user_id_,function(arg,data)
 msg = arg.msg
@@ -4125,11 +4126,11 @@ end,{msg=msg})
 return false
 end
 
-if MsgText[1]== "م المطور" then
+if MsgText[1]== "م M" then
 if not msg.SudoBase then return " • هذا الامر يخص ( مطور الاساسي ) بس " end
 SUDO_USER = redis:hgetall(boss..'username:'..SUDO_ID).username
 
-local text = [[ اهلا بك في قائمة اوامر المطورين
+local text = [[ اهلا بك في قائمة اوامر Mastr
 للاستفسار - []]..SUDO_USER..[[]
 
 - تفعيل
@@ -4260,7 +4261,7 @@ end
 
 end 
 
-if MsgText[1] == "التسليه" or MsgText[1]=="التسليه" then
+if MsgText[1] == "الاغاني" or MsgText[1]=="الاغاني" then
 return [[
 *اهلين عيني في اوامر الاغاني*
 ————————————————————
