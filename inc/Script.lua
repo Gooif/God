@@ -3922,9 +3922,10 @@ if MsgText[1] == "/CommandsD82iBot" or MsgText[1] == "/Commands" or  MsgText[1] 
 if not msg.Admin then return "- هذا الامر يخص ( الادمن,المدير,المالك,المطور) بس  \n" end
 
 SUDO_USER = redis:hgetall(boss..'username:'..SUDO_ID).username
+text = [[للاستفسار - []]..SUDO_USER..[[]
+
 ⇜ هلا فيك في اوامر البوت 
 ]]
-text = [[للاستفسار - []]..SUDO_USER..[[]
 
 GetUserID(msg.sender_user_id_,function(arg,data)
 msg = arg.msg
@@ -3934,9 +3935,10 @@ textD = Flter_Markdown(convert_Klmat(msg,data,textD,true))
 else
 textD = text
 end
-*⇜ هلا فيك في اوامر البوت‏‌‌‏‌‌‌‌‏*
-]]
 msg.textmsg = [[للاستفسار - []]..SUDO_USER..[[]
+
+⇜ هلا فيك في اوامر البوت‏‌‌‏‌‌‌‌‏
+]]
 
 msg.KeyboardCmd = keyboardCmd
 SendMsgInline(msg)
