@@ -2371,9 +2371,9 @@ if data.channel_ and data.channel_.status_.ID  == "ChatMemberStatusMember" then
 return sendMsg(arg.chat_id_,arg.id_,'- معليش البوت ليس ادمن  في المجموعه \n- يرجى رفعه ادمن لتتمكن من تفعيل البوت  ')
 end
 if arg.lock_servicez then 
-sendMsg(arg.chat_id_,arg.id_,' •من 「 '..NameUser..' 」\n-تم التفعيل القروب \n•اضغط هنا [/commands](https://t.me/D82iBot?start=commands')
+sendMsg(arg.chat_id_,arg.id_,' •من 「 '..NameUser..' 」\n-تم التفعيل القروب \n-ارسل [/commands](https://t.me/D82iBot?start=commands')
 else
-sendMsg(arg.chat_id_,arg.id_,'•من「 '..NameUser..' 」\n•فعلت المجموعة ورفعت كل الادمن\n•اضغط هنا [/commands](https://t.me/D82iBot?start=commands')
+sendMsg(arg.chat_id_,arg.id_,'•من「 '..NameUser..' 」\n-تم التفعيل القروب \n-ارسل [/commands](https://t.me/D82iBot?start=commands')
 end
 
 GetChannelAdministrators(arg.chat_id_,function(arg,data)
@@ -2741,9 +2741,9 @@ if cmd == "ban" then
 if UserID == our_id then   
 return sendMsg(ChatID,MsgID,"•مايمديك تحظر البوت  ") 
 elseif UserID == 1099083018 or UserID == 60809019 then 
-return sendMsg(ChatID,MsgID,"•هييه مايمديك تحظر مطور السورس ") 
+return sendMsg(ChatID,MsgID,"•هييه مايمديك تحظر مطور الاساسي ") 
 elseif UserID == SUDO_ID then 
-return sendMsg(ChatID,MsgID,"•هييه مايمديك تحظر المطور الاساسي ") 
+return sendMsg(ChatID,MsgID,"•هييه مايمديك تحظر المطور السورس ") 
 elseif redis:sismember(boss..':SUDO_BOT:',UserID) then 
 return sendMsg(ChatID,MsgID,"•مايمديك تحظر المطور ") 
 elseif redis:sismember(boss..':MONSHA_BOT:'..ChatID,UserID) then 
