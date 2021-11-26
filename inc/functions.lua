@@ -389,8 +389,8 @@ list_settings = '{"inline_keyboard": ['
 msg.KeyboardCmd = list_settings
 textMD = [[
 𝗪𝗲𝗹𝗰𝗼𝗺𝗲 𝗦𝗼𝘂𝗿𝗰𝗲 𝗣𝗮𝗿𝗶𝘀
-𓃠[𝙊𝙒𝙉𝙀𝙍 ⁦](https://t.me/iiiziiii)
-𓃠[𝘾𝙃𝘼𝙉𝙉𝙀𝙇](https://t.me/rnnni)
+[𝙊𝙒𝙉𝙀𝙍 ⁦](https://t.me/iiiziiii)
+[𝘾𝙃𝘼𝙉𝙉𝙀𝙇](https://t.me/rnnni)
 ]]
 GetUserID(msg.sender_user_id_,function(arg,data)
 msg = arg.msg
@@ -2371,7 +2371,7 @@ if data.channel_ and data.channel_.status_.ID  == "ChatMemberStatusMember" then
 return sendMsg(arg.chat_id_,arg.id_,'- معليش البوت ليس ادمن  في المجموعه \n- يرجى رفعه ادمن لتتمكن من تفعيل البوت  ')
 end
 if arg.lock_servicez then 
-sendMsg(arg.chat_id_,arg.id_,' •من 「 '..NameUser..' 」\n•فعلت المجموعة ورفعت كل الادمن \n•اضغط هنا [/commands](https://t.me/D82iBot?start=commands')
+sendMsg(arg.chat_id_,arg.id_,' •من 「 '..NameUser..' 」\n-تم التفعيل القروب \n•اضغط هنا [/commands](https://t.me/D82iBot?start=commands')
 else
 sendMsg(arg.chat_id_,arg.id_,'•من「 '..NameUser..' 」\n•فعلت المجموعة ورفعت كل الادمن\n•اضغط هنا [/commands](https://t.me/D82iBot?start=commands')
 end
