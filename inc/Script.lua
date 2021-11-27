@@ -3852,7 +3852,7 @@ end
 if MsgText[1] == "ضع اسم للبوت"  then
 if not msg.SudoBase then return"• هذا الامر يخص ( مطور الاساسي ) بس  \n" end
 redis:setex(boss..'namebot:witting'..msg.sender_user_id_,300,true)
-send_msg"• تمام عيني\n• الحين ارسل الاسم  للبوت "
+return"• تمام عيني\n• الحين ارسل الاسم  للبوت "
 end
 
 if MsgText[1] == 'server' then
