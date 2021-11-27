@@ -2371,9 +2371,9 @@ if data.channel_ and data.channel_.status_.ID  == "ChatMemberStatusMember" then
 return sendMsg(arg.chat_id_,arg.id_,'- معليش البوت ليس ادمن  في المجموعه \n- يرجى رفعه ادمن لتتمكن من تفعيل البوت  ')
 end
 if arg.lock_servicez then 
-sendMsg(arg.chat_id_,arg.id_,' •من 「 '..NameUser..' 」\n-تم التفعيل القروب \n-ارسل [/commands](https://t.me/D82iBot?start=commands')
+sendMsg(arg.chat_id_,arg.id_,' •من 「 '..NameUser..' 」\n-تم التفعيل القروب \n-ارسل [/commands](https://t.me/V8i0Bot?start=commands')
 else
-sendMsg(arg.chat_id_,arg.id_,'•من「 '..NameUser..' 」\n-تم التفعيل القروب \n-ارسل [/commands](https://t.me/D82iBot?start=commands')
+sendMsg(arg.chat_id_,arg.id_,'•من「 '..NameUser..' 」\n-تم التفعيل القروب \n-ارسل [/commands](https://t.me/V8i0Bot?start=commands')
 end
 
 GetChannelAdministrators(arg.chat_id_,function(arg,data)
