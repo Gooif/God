@@ -128,8 +128,8 @@ keyboardCmd = [[{
 
 "inline_keyboard": [
 
-[{"text": "①","callback_data": "List1"},{"text": "②","callback_data": "List2"}],
-[{"text": "③","callback_data": "List3"}],
+[{"text": "1م","callback_data": "List1"},{"text": "م2","callback_data": "List2"}],
+[{"text": "م3","callback_data": "List3"}],
 [{"text": "الالعاب","callback_data": "CmdSudo"},{"text": "Suorce","callback_data": "List4"}],
 
 [{"text": "","callback_data": "LoginOut"}]
@@ -292,7 +292,7 @@ end
 
 function UpdateM3Query(msg)
 list_settings = '{"inline_keyboard": ['
-..'[{"text": "الالعاب","callback_data": "CmdSudo"},'..'{"text": "السورسس","callback_data": "List4"}],'
+..'[{"text": "الالعاب","callback_data": "CmdSudo"},'..'{"text": "Suorce","callback_data": "List4"}],'
 ..'[{"text": "Back ","callback_data": "CmdBack"}]'
 ..']}'
 msg.KeyboardCmd = list_settings
@@ -389,7 +389,6 @@ list_settings = '{"inline_keyboard": ['
 msg.KeyboardCmd = list_settings
 textMD = [[
 𝗪𝗲𝗹𝗰𝗼𝗺𝗲 𝗦𝗼𝘂𝗿𝗰𝗲 𝗣𝗮𝗿𝗶𝘀
-[𝙊𝙒𝙉𝙀𝙍 ⁦](https://t.me/iiiziiii)
 [𝘾𝙃𝘼𝙉𝙉𝙀𝙇](https://t.me/rnnni)
 ]]
 GetUserID(msg.sender_user_id_,function(arg,data)
